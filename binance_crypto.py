@@ -1,0 +1,1145 @@
+#!/usr/bin/env python3
+"""
+Binance Crypto Trading Signal Generator
+Access any crypto pair from Binance and analyze with SuperBuySellTrend
+
+Supports any pair: BTC, ETH, APR, SOL, DOGE, etc.
+"""
+import ccxt
+import pandas as pd
+from datetime import datetime, timedelta
+from super_buy_sell_trend import calculate_super_buy_sell_trend
+from halftrend import calculate_halftrend
+from parabolic_sar import calculate_parabolic_sar
+from swift_algo import calculate_swift_algo
+from chandelier_exit import calculate_chandelier_exit
+from nrtr import calculate_nrtr
+from smc import SMCSystem
+from indicators import calculate_rsi, calculate_macd, calculate_moving_averages, calculate_adx
+
+
+def get_binance_data(symbol, timeframe="5m", limit=500):
+    """
+    Fetch crypto data from Binance (spot or futures).
+    
+    Args:
+        symbol: Trading pair (e.g., 'BTC/USDT' for spot, 'LAB/USDT:USDT' for USD-M futures)
+        timeframe: Candlestick period ('1m', '5m', '15m', '1h', '4h', '1d')
+        limit: Number of candles to fetch (default 500)
+    
+    Returns:
+        DataFrame with OHLCV data
+    """
+    try:
+        # Auto-select exchange based on symbol format
+        # Futures (USD-M) symbols use the ":USDT" suffix in ccxt, e.g., 'LAB/USDT:USDT'
+        if ':' in symbol:
+            exchange = ccxt.binanceusdm()
+            ex_name = 'binanceusdm'
+        else:
+            exchange = ccxt.binance()
+            ex_name = 'binance'
+        
+        print(f"Fetching {symbol} on {ex_name} {timeframe}...")
+        
+        # Fetch OHLCV data
+        ohlcv = exchange.fetch_ohlcv(symbol, timeframe, limit=limit)
+        
+        # Convert to DataFrame
+        df = pd.DataFrame(
+            ohlcv,
+            columns=['timestamp', 'Open', 'High', 'Low', 'Close', 'Volume']
+        )
+        
+        # Convert timestamp to datetime
+        df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
+        df.set_index('timestamp', inplace=True)
+        
+        print(f"✓ Loaded {len(df)} candles\n")
+        return df
+        
+    except ccxt.ExchangeError as e:
+        print(f"❌ Exchange error: {e}")
+        return None
+    except Exception as e:
+        print(f"❌ Error fetching {symbol}: {e}")
+        return None
+
+
+def list_available_symbols(exchange_name="binance", limit=50):
+    """
+    List available trading pairs on Binance
+    
+    Args:
+        exchange_name: Name of exchange ('binance', 'kraken', 'coinbase', etc.)
+        limit: Number of symbols to display
+    """
+    try:
+        if exchange_name.lower() == "binance":
+            exchange = ccxt.binance()
+        elif exchange_name.lower() == "kraken":
+            exchange = ccxt.kraken()
+        elif exchange_name.lower() == "coinbase":
+            exchange = ccxt.coinbase()
+        else:
+            exchange = ccxt.binance()
+        
+        symbols = exchange.symbols
+        
+        print(f"\n{'='*80}")
+        print(f"Available pairs on {exchange_name.upper()}: {len(symbols)} total")
+        print(f"{'='*80}\n")
+        
+        # Show first 50
+        for i, symbol in enumerate(symbols[:limit]):
+            print(f"  {i+1:3d}. {symbol}")
+        
+        if len(symbols) > limit:
+            print(f"\n  ... and {len(symbols) - limit} more")
+        
+        return symbols
+        
+    except Exception as e:
+        print(f"Error listing symbols: {e}")
+        return []
+
+
+def get_multi_timeframe_analysis(symbol, base_timeframe="5m"):
+    """
+    Get analysis across multiple timeframes for confirmation
+    
+    Args:
+        symbol: Trading pair (e.g., 'LAB/USDT:USDT')
+        base_timeframe: Base timeframe for analysis
+        
+    Returns:
+        Dict with analysis for 5m, 15m, 1h, 4h
+    """
+    timeframes = ['5m', '15m', '1h', '4h']
+    analyses = {}
+    
+    for tf in timeframes:
+        try:
+            analysis = analyze_crypto_binance(symbol, timeframe=tf, periods=10)
+            if analysis:
+                analyses[tf] = analysis
+        except Exception as e:
+            print(f"Error fetching {tf}: {e}")
+    
+    return analyses
+
+
+def validate_signal_multi_timeframe(signal_5m, analyses):
+    """
+    Validate 5m signal using multi-timeframe confirmation
+    
+    Args:
+        signal_5m: Signal from 5m analysis
+        analyses: Dict with analyses from all timeframes
+        
+    Returns:
+        Dict with validation result
+    """
+    result = {
+        'approved': False,
+        'strength': 0,
+        'confirmations': 0,
+        'timeframes_aligned': [],
+        'reasoning': [],
+    }
+    
+    if not signal_5m or signal_5m['action'] == 'WAIT':
+        result['reasoning'].append('⏸️  No clear 5m signal to validate')
+        return result
+    
+    signal_direction = signal_5m['action']  # 'BUY' or 'SELL'
+    
+    # Check 15m alignment
+    if '15m' in analyses:
+        tf15m = analyses['15m']
+        tf15m_trend = 'UPTREND' if tf15m.get('trend') == 'UPTREND' else 'DOWNTREND'
+        
+        if (signal_direction == 'BUY' and tf15m_trend == 'UPTREND') or \
+           (signal_direction == 'SELL' and tf15m_trend == 'DOWNTREND'):
+            result['confirmations'] += 1
+            result['timeframes_aligned'].append('15m')
+            result['reasoning'].append(f"✅ 15m {tf15m_trend} confirms")
+        else:
+            result['reasoning'].append(f"⚠️  15m {tf15m_trend} does NOT confirm")
+    
+    # Check 1h alignment
+    if '1h' in analyses:
+        tf1h = analyses['1h']
+        tf1h_trend = 'UPTREND' if tf1h.get('trend') == 'UPTREND' else 'DOWNTREND'
+        
+        if (signal_direction == 'BUY' and tf1h_trend == 'UPTREND') or \
+           (signal_direction == 'SELL' and tf1h_trend == 'DOWNTREND'):
+            result['confirmations'] += 1
+            result['timeframes_aligned'].append('1h')
+            result['reasoning'].append(f"✅ 1h {tf1h_trend} confirms")
+        else:
+            result['reasoning'].append(f"⚠️  1h {tf1h_trend} does NOT confirm")
+    
+    # Check 4h (via Swift Algo HTF)
+    if '4h' in analyses:
+        tf4h = analyses['4h']
+        tf4h_trend = 'UPTREND' if tf4h.get('trend') == 'UPTREND' else 'DOWNTREND'
+        
+        if (signal_direction == 'BUY' and tf4h_trend == 'UPTREND') or \
+           (signal_direction == 'SELL' and tf4h_trend == 'DOWNTREND'):
+            result['confirmations'] += 1
+            result['timeframes_aligned'].append('4h')
+            result['reasoning'].append(f"✅ 4h {tf4h_trend} confirms")
+        else:
+            result['reasoning'].append(f"⚠️  4h {tf4h_trend} does NOT confirm")
+    
+    # Decision logic
+    result['strength'] = (result['confirmations'] / 3) * 100  # 0-100
+    result['approved'] = result['confirmations'] >= 2  # Need at least 2 TF confirmations
+    
+    return result
+
+
+def analyze_crypto_binance(symbol, timeframe="5m", periods=10, multiplier1=0.8, multiplier2=1.6):
+    """
+    Analyze crypto pair with SuperBuySellTrend
+    
+    Returns:
+        Dict with analysis data
+    """
+    print(f"\n{'='*80}")
+    print(f"BINANCE CRYPTO ANALYSIS: {symbol}")
+    print(f"Timeframe: {timeframe}")
+    print(f"{'='*80}\n")
+    
+    # Fetch data
+    df = get_binance_data(symbol, timeframe=timeframe, limit=500)
+    
+    if df is None or len(df) < 200:
+        print("❌ Insufficient data for analysis")
+        return None
+    
+    # Calculate SBST
+    df = calculate_super_buy_sell_trend(df, periods=periods, 
+                                        multiplier1=multiplier1, 
+                                        multiplier2=multiplier2)
+    
+    # Calculate HalfTrend
+    df = calculate_halftrend(df, amplitude=2, channel_deviation=2)
+    
+    # Calculate Parabolic SAR
+    df = calculate_parabolic_sar(df, start=0.02, increment=0.02, maximum=0.2)
+    
+    # Calculate Swift Algo
+    df = calculate_swift_algo(df)
+    
+    # Calculate Chandelier Exit
+    df = calculate_chandelier_exit(df, length=22, mult=3.0)
+    
+    # Calculate NRTR
+    df = calculate_nrtr(df, percentage=0.02)
+    
+    # Calculate SMC System
+    smc = SMCSystem(ob_lookback=14, vol_multiplier=2.0, displacement_pct=0.5,
+                   fvg_min_gap_pct=0.5, liq_tolerance=1.0, atr_period=14)
+    smc_analysis = smc.calculate(df)
+    
+    # Calculate additional indicators
+    df = calculate_rsi(df)
+    df = calculate_macd(df)
+    df = calculate_moving_averages(df, periods=[10, 20, 50])
+    df = calculate_adx(df)
+    
+    # Get latest values
+    latest = df.iloc[-1]
+    prev_5 = df.iloc[-6] if len(df) >= 6 else df.iloc[0]
+    
+    # Check for signals
+    recent_buy = df['buy_signal'].iloc[-5:].any()
+    recent_sell = df['sell_signal'].iloc[-5:].any()
+    recent_buy_confirm = df['buy_confirm'].iloc[-5:].any()
+    recent_sell_confirm = df['sell_confirm'].iloc[-5:].any()
+    
+    # Current signals
+    current_buy = latest['buy_signal']
+    current_sell = latest['sell_signal']
+    current_buy_confirm = latest['buy_confirm']
+    current_sell_confirm = latest['sell_confirm']
+    
+    # Price momentum
+    price_change_5c = ((latest['Close'] - prev_5['Close']) / prev_5['Close']) * 100
+    
+    # Trend info
+    trend = 'UPTREND' if latest['trend'] == 1 else 'DOWNTREND'
+    trend_confirmed = 'UPTREND' if latest['trendx'] == 1 else 'DOWNTREND'
+    trend_aligned = trend == trend_confirmed
+    
+    # Compile analysis
+    analysis = {
+        'symbol': symbol,
+        'timeframe': timeframe,
+        'timestamp': latest.name,
+        'price': latest['Close'],
+        'price_change_5c': price_change_5c,
+        
+        # SBST signals
+        'trend': trend,
+        'trend_confirmed': trend_confirmed,
+        'trend_aligned': trend_aligned,
+        'current_buy_signal': current_buy,
+        'current_sell_signal': current_sell,
+        'current_buy_confirm': current_buy_confirm,
+        'current_sell_confirm': current_sell_confirm,
+        'recent_buy': recent_buy,
+        'recent_sell': recent_sell,
+        'recent_buy_confirm': recent_buy_confirm,
+        'recent_sell_confirm': recent_sell_confirm,
+        
+        # Support/Resistance
+        'up_level': latest['up_level'],
+        'dn_level': latest['dn_level'],
+        'upx_level': latest['upx_level'],
+        'dnx_level': latest['dnx_level'],
+        
+        # Technical indicators
+        'rsi': latest.get('RSI'),
+        'macd': latest.get('MACD_12_26_9'),
+        'macd_signal': latest.get('MACDs_12_26_9'),
+        'macd_hist': latest.get('MACDh_12_26_9'),
+        'adx': latest.get('ADX_14'),
+        'ema_10': latest.get('EMA_10'),
+        'ema_20': latest.get('EMA_20'),
+        'sma_50': latest.get('SMA_50'),
+        'atr': latest['atr'],
+        
+        # HalfTrend indicator
+        'halftrend': latest.get('halftrend'),
+        'halftrend_trend': 'UPTREND' if latest.get('halftrend_trend') == 0 else 'DOWNTREND',
+        'halftrend_buy_signal': latest.get('halftrend_buy_signal', False),
+        'halftrend_sell_signal': latest.get('halftrend_sell_signal', False),
+        'halftrend_atr_high': latest.get('halftrend_atr_high'),
+        'halftrend_atr_low': latest.get('halftrend_atr_low'),
+        'halftrend_recent_buy': df['halftrend_buy_signal'].iloc[-5:].any(),
+        'halftrend_recent_sell': df['halftrend_sell_signal'].iloc[-5:].any(),
+        
+        # Parabolic SAR indicator
+        'psar': latest.get('psar'),
+        'psar_trend': 'UPTREND' if latest.get('psar_trend') == 1 else 'DOWNTREND',
+        'psar_af': latest.get('psar_af'),
+        'psar_buy_signal': latest.get('psar_buy_signal', False),
+        'psar_sell_signal': latest.get('psar_sell_signal', False),
+        'psar_recent_buy': df['psar_buy_signal'].iloc[-5:].any(),
+        'psar_recent_sell': df['psar_sell_signal'].iloc[-5:].any(),
+        'psar_direction_change': latest.get('psar_direction_change', False),
+        
+        # Swift Algo indicator
+        'swift_strong_bullish': latest.get('strong_bullish', False),
+        'swift_strong_bearish': latest.get('strong_bearish', False),
+        'swift_is_sideways': latest.get('is_sideways', False),
+        'swift_long_signal': latest.get('filtered_long_signal', False),
+        'swift_short_signal': latest.get('filtered_short_signal', False),
+        'swift_strong_long': latest.get('is_strong_long', False),
+        'swift_strong_short': latest.get('is_strong_short', False),
+        'swift_bullish_reversal': latest.get('filtered_bullish_reversal', False),
+        'swift_bearish_reversal': latest.get('filtered_bearish_reversal', False),
+        'swift_ema9': latest.get('ema9'),
+        'swift_ema21': latest.get('ema21'),
+        'swift_ema50': latest.get('ema50'),
+        
+        # Chandelier Exit indicator
+        'ce_long_stop': latest.get('ce_long_stop'),
+        'ce_short_stop': latest.get('ce_short_stop'),
+        'ce_direction': 'LONG' if latest.get('ce_direction') == 1 else 'SHORT',
+        'ce_buy_signal': latest.get('ce_buy_signal', False),
+        'ce_sell_signal': latest.get('ce_sell_signal', False),
+        'ce_recent_buy': df['ce_buy_signal'].iloc[-5:].any(),
+        'ce_recent_sell': df['ce_sell_signal'].iloc[-5:].any(),
+        
+        # NRTR indicator
+        'nrtr_value': latest.get('nrtr_value'),
+        'nrtr_trend': 'UPTREND' if latest.get('nrtr_trend') == 1 else 'DOWNTREND',
+        'nrtr_buy_signal': latest.get('nrtr_buy_signal', False),
+        'nrtr_sell_signal': latest.get('nrtr_sell_signal', False),
+        'nrtr_recent_buy': df['nrtr_buy_signal'].iloc[-5:].any(),
+        'nrtr_recent_sell': df['nrtr_sell_signal'].iloc[-5:].any(),
+        
+        # Smart Money Concepts (SMC)
+        'smc_trend': smc_analysis.get('trend'),
+        'smc_choch_bullish': smc_analysis.get('choch_bullish', False),
+        'smc_choch_bearish': smc_analysis.get('choch_bearish', False),
+        'smc_bullish_ob': smc_analysis.get('bullish_ob', False),
+        'smc_bullish_ob_price': smc_analysis.get('bullish_ob_price'),
+        'smc_bearish_ob': smc_analysis.get('bearish_ob', False),
+        'smc_bearish_ob_price': smc_analysis.get('bearish_ob_price'),
+        'smc_bullish_fvg': smc_analysis.get('bullish_fvg', False),
+        'smc_bearish_fvg': smc_analysis.get('bearish_fvg', False),
+        'smc_liq_sweep_bull': smc_analysis.get('liq_sweep_bull', False),
+        'smc_liq_sweep_bear': smc_analysis.get('liq_sweep_bear', False),
+        'smc_confirmation_bull': smc_analysis.get('confirmation_bull', False),
+        'smc_confirmation_bear': smc_analysis.get('confirmation_bear', False),
+        'smc_long_setup': smc_analysis.get('long_setup', False),
+        'smc_short_setup': smc_analysis.get('short_setup', False),
+    }
+    
+    return analysis
+
+
+def analyze_crypto_simple(symbol, timeframe="5m", periods=10, multiplier1=0.8, multiplier2=1.6):
+    """Lightweight analysis using a subset of indicators (SBST + RSI/MACD/ADX)."""
+    print(f"\n{'='*80}")
+    print(f"BINANCE CRYPTO ANALYSIS (SIMPLE): {symbol}")
+    print(f"Timeframe: {timeframe}")
+    print(f"{'='*80}\n")
+    
+    df = get_binance_data(symbol, timeframe=timeframe, limit=500)
+    if df is None or len(df) < 200:
+        print("❌ Insufficient data for analysis")
+        return None
+    
+    # Core indicators only
+    df = calculate_super_buy_sell_trend(df, periods=periods, multiplier1=multiplier1, multiplier2=multiplier2)
+    df = calculate_rsi(df)
+    df = calculate_macd(df)
+    df = calculate_moving_averages(df, periods=[10, 20])
+    df = calculate_adx(df)
+    
+    latest = df.iloc[-1]
+    prev_5 = df.iloc[-6] if len(df) >= 6 else df.iloc[0]
+    price_change_5c = ((latest['Close'] - prev_5['Close']) / prev_5['Close']) * 100
+    
+    trend = 'UPTREND' if latest['trend'] == 1 else 'DOWNTREND'
+    trend_confirmed = 'UPTREND' if latest['trendx'] == 1 else 'DOWNTREND'
+    trend_aligned = trend == trend_confirmed
+    
+    analysis = {
+        'symbol': symbol,
+        'timeframe': timeframe,
+        'timestamp': latest.name,
+        'price': latest['Close'],
+        'price_change_5c': price_change_5c,
+        
+        'trend': trend,
+        'trend_confirmed': trend_confirmed,
+        'trend_aligned': trend_aligned,
+        'current_buy_signal': bool(latest['buy_signal']),
+        'current_sell_signal': bool(latest['sell_signal']),
+        'current_buy_confirm': bool(latest['buy_confirm']),
+        'current_sell_confirm': bool(latest['sell_confirm']),
+        'recent_buy': df['buy_signal'].iloc[-5:].any(),
+        'recent_sell': df['sell_signal'].iloc[-5:].any(),
+        'recent_buy_confirm': df['buy_confirm'].iloc[-5:].any(),
+        'recent_sell_confirm': df['sell_confirm'].iloc[-5:].any(),
+        
+        'up_level': latest['up_level'],
+        'dn_level': latest['dn_level'],
+        'upx_level': latest['upx_level'],
+        'dnx_level': latest['dnx_level'],
+        
+        'rsi': latest.get('RSI'),
+        'macd': latest.get('MACD_12_26_9'),
+        'macd_signal': latest.get('MACDs_12_26_9'),
+        'macd_hist': latest.get('MACDh_12_26_9'),
+        'adx': latest.get('ADX_14'),
+        'ema_10': latest.get('EMA_10'),
+        'ema_20': latest.get('EMA_20'),
+        'atr': latest['atr'],
+    }
+    return analysis
+
+
+def calculate_weighted_confidence(analysis):
+    """
+    Calculate weighted confidence based on indicator importance.
+    Fixes normalization so final score is a true 0-100 composite instead of clustering ~40%.
+    
+    Args:
+        analysis: Analysis dict with all indicator data
+        
+    Returns:
+        Float: Weighted confidence score (0-100)
+    """
+    # Component weights must sum to 1.0
+    weights = {
+        'sbst': 0.20,          # 20% - Primary trend
+        'halftrend': 0.12,     # 12% - Support/resistance
+        'psar': 0.10,          # 10% - Reversals
+        'swift_algo': 0.15,    # 15% - Momentum
+        'chandelier': 0.08,    # 8% - Exits
+        'nrtr': 0.10,          # 10% - Trailing reversal
+        'smc': 0.12,           # 12% - Structure
+        'rsi': 0.05,           # 5% - Extremes
+        'macd': 0.05,          # 5% - Histogram
+        'adx': 0.03,           # 3% - Trend strength
+    }
+    
+    score = 0.0
+    
+    # Define component maximum raw scores for normalization
+    max_scores = {
+        'sbst': 20,        # 15 (alignment) + 5 (signal)
+        'halftrend': 12,   # 10 (trend) + 2 (signal)
+        'psar': 10,        # 10 (trend)
+        'swift_algo': 15,  # 15 (strong) or 10 (regular)
+        'chandelier': 8,   # 8 (signal)
+        'nrtr': 10,        # 10 (trend)
+        'smc': 12,         # 12 (full) or 6 (OB only)
+        'rsi': 5,          # 5 (extreme) or 3 (healthy)
+        'macd': 5,         # 5 (direction)
+        'adx': 3,          # 3 (>25)
+    }
+    
+    # SBST (20%)
+    sbst_score = 0
+    if analysis.get('trend_aligned'):
+        sbst_score += 15
+    if analysis.get('current_buy_signal') or analysis.get('current_sell_signal'):
+        sbst_score += 5
+    score += (sbst_score / max_scores['sbst']) * 100 * weights['sbst']
+    
+    # HalfTrend (12%)
+    ht_score = 0
+    if analysis.get('halftrend_trend') in ['UPTREND', 'DOWNTREND']:
+        ht_score += 10
+    if analysis.get('halftrend_buy_signal') or analysis.get('halftrend_sell_signal'):
+        ht_score += 2
+    score += (ht_score / max_scores['halftrend']) * 100 * weights['halftrend']
+    
+    # Parabolic SAR (10%)
+    psar_score = 0
+    if analysis.get('psar_trend') in ['UPTREND', 'DOWNTREND']:
+        psar_score += 10
+    score += (psar_score / max_scores['psar']) * 100 * weights['psar']
+    
+    # Swift Algo (15%)
+    swift_score = 0
+    if analysis.get('swift_strong_bullish') or analysis.get('swift_strong_bearish'):
+        swift_score += 15
+    elif analysis.get('swift_long_signal') or analysis.get('swift_short_signal'):
+        swift_score += 10
+    score += (swift_score / max_scores['swift_algo']) * 100 * weights['swift_algo']
+    
+    # Chandelier Exit (8%)
+    ce_score = 0
+    if analysis.get('ce_buy_signal') or analysis.get('ce_sell_signal'):
+        ce_score += 8
+    score += (ce_score / max_scores['chandelier']) * 100 * weights['chandelier']
+    
+    # NRTR (10%)
+    nrtr_score = 0
+    if analysis.get('nrtr_trend') in ['UPTREND', 'DOWNTREND']:
+        nrtr_score += 10
+    score += (nrtr_score / max_scores['nrtr']) * 100 * weights['nrtr']
+    
+    # SMC (12%)
+    smc_score = 0
+    if analysis.get('smc_long_setup') or analysis.get('smc_short_setup'):
+        smc_score += 12
+    elif analysis.get('smc_bullish_ob') or analysis.get('smc_bearish_ob'):
+        smc_score += 6
+    score += (smc_score / max_scores['smc']) * 100 * weights['smc']
+    
+    # RSI (5%)
+    rsi_score = 0
+    rsi = analysis.get('rsi', 50)
+    if rsi is not None:
+        if rsi < 30 or rsi > 70:
+            rsi_score += 5
+        elif 40 <= rsi <= 60:
+            rsi_score += 3
+    score += (rsi_score / max_scores['rsi']) * 100 * weights['rsi']
+    
+    # MACD (5%)
+    macd_score = 0
+    macd_hist = analysis.get('macd_hist', 0)
+    try:
+        if macd_hist is not None and abs(float(macd_hist)) > 0:
+            macd_score += 5
+    except Exception:
+        pass
+    score += (macd_score / max_scores['macd']) * 100 * weights['macd']
+    
+    # ADX (3%)
+    adx_score = 0
+    adx = analysis.get('adx', 0)
+    try:
+        if adx is not None and float(adx) > 25:
+            adx_score += 3
+    except Exception:
+        pass
+    score += (adx_score / max_scores['adx']) * 100 * weights['adx']
+    
+    return float(max(0, min(100, score)))
+
+
+def detect_divergences(analysis):
+    """
+    Detect divergences between indicators that suggest false signals
+    
+    Args:
+        analysis: Analysis dict
+        
+    Returns:
+        List of divergence warnings
+    """
+    divergences = []
+    
+    # Price vs RSI divergence
+    rsi = analysis.get('rsi', 50)
+    price_change = analysis.get('price_change_5c', 0)
+    
+    if price_change > 2 and rsi < 50:  # Price up but RSI not confirming
+        divergences.append({
+            'type': 'Bearish RSI Divergence',
+            'severity': 'Medium',
+            'description': f'Price +{price_change:.1f}% but RSI only {rsi:.1f}',
+            'confidence_impact': -20
+        })
+    elif price_change < -2 and rsi > 50:  # Price down but RSI not confirming
+        divergences.append({
+            'type': 'Bullish RSI Divergence', 
+            'severity': 'Medium',
+            'description': f'Price {price_change:.1f}% but RSI still {rsi:.1f}',
+            'confidence_impact': -20
+        })
+    
+    # SBST vs SMC trend disagreement
+    sbst_trend = analysis.get('trend')
+    smc_trend = analysis.get('smc_trend')
+    
+    if sbst_trend and smc_trend and sbst_trend.lower() != smc_trend.lower():
+        divergences.append({
+            'type': 'Structure Disagreement',
+            'severity': 'High',
+            'description': f'SBST: {sbst_trend} vs SMC: {smc_trend}',
+            'confidence_impact': -30
+        })
+    
+    # Multiple reversal indicators (potential whipsaws)
+    reversal_count = sum([
+        analysis.get('halftrend_buy_signal', 0) or analysis.get('halftrend_sell_signal', 0),
+        analysis.get('psar_buy_signal', 0) or analysis.get('psar_sell_signal', 0),
+        analysis.get('nrtr_buy_signal', 0) or analysis.get('nrtr_sell_signal', 0),
+    ])
+    
+    if reversal_count >= 2:
+        divergences.append({
+            'type': 'Multiple Reversal Signals',
+            'severity': 'Medium',
+            'description': f'{reversal_count} reversal indicators active',
+            'confidence_impact': -15
+        })
+    
+    return divergences
+
+
+def generate_trade_signal(analysis, use_weighted_confidence=True):
+    """
+    Generate actionable trade signal with risk management
+    """
+    if not analysis:
+        return None
+    
+    signal = {
+        'action': 'WAIT',
+        'confidence': 0,
+        'reason': [],
+        'entry': None,
+        'stop_loss': None,
+        'take_profit_1': None,
+        'take_profit_2': None,
+        'risk_reward': None,
+        'divergences': [],
+        'weighted_confidence': 0,
+    }
+    
+    # Detect divergences
+    divergences = detect_divergences(analysis)
+    signal['divergences'] = divergences
+    
+    price = analysis['price']
+    rsi = analysis['rsi']
+    macd_hist = analysis['macd_hist']
+    adx = analysis['adx']
+    
+    # === BUY SIGNAL LOGIC ===
+    buy_score = 0
+    
+    # HalfTrend confirmation
+    if analysis.get('halftrend_trend') == 'UPTREND':
+        buy_score += 2
+        signal['reason'].append("✓ HalfTrend uptrend")
+    
+    if analysis.get('halftrend_buy_signal') or analysis.get('halftrend_recent_buy'):
+        buy_score += 2
+        signal['reason'].append("✓ HalfTrend buy signal")
+    
+    # Parabolic SAR confirmation
+    if analysis.get('psar_trend') == 'UPTREND':
+        buy_score += 2
+        signal['reason'].append("✓ Parabolic SAR uptrend")
+    
+    if analysis.get('psar_buy_signal') or analysis.get('psar_recent_buy'):
+        buy_score += 1
+        signal['reason'].append("✓ Parabolic SAR reversal")
+    
+    # Swift Algo confirmation
+    if analysis.get('swift_strong_bullish'):
+        buy_score += 3
+        signal['reason'].append("✓ Swift Algo strong bullish")
+    
+    if analysis.get('swift_long_signal') or analysis.get('swift_strong_long'):
+        buy_score += 2
+        signal['reason'].append("✓ Swift Algo long signal")
+    
+    if analysis.get('swift_bullish_reversal'):
+        buy_score += 1
+        signal['reason'].append("✓ Swift Algo bullish reversal")
+    
+    if analysis['trend_aligned'] and analysis['trend'] == 'UPTREND':
+        buy_score += 3
+        signal['reason'].append("✓ Confirmed uptrend (both SBST levels)")
+    
+    if analysis['current_buy_signal'] or analysis['recent_buy']:
+        buy_score += 2
+        signal['reason'].append("✓ SBST buy signal triggered")
+    
+    if analysis['current_buy_confirm'] or analysis['recent_buy_confirm']:
+        buy_score += 2
+        signal['reason'].append("✓ SBST buy confirmed (Level 2)")
+    
+    if rsi and 40 < rsi < 70:
+        buy_score += 1
+        signal['reason'].append(f"✓ RSI healthy ({rsi:.1f})")
+    elif rsi and rsi < 30:
+        buy_score += 1
+        signal['reason'].append(f"✓ RSI oversold ({rsi:.1f}) - potential bounce")
+    
+    if macd_hist and macd_hist > 0:
+        buy_score += 1
+        signal['reason'].append("✓ MACD bullish")
+    
+    if adx and adx > 20:
+        buy_score += 1
+        signal['reason'].append(f"✓ Strong trend (ADX: {adx:.1f})")
+    
+    if analysis['price_change_5c'] > 0:
+        buy_score += 1
+        signal['reason'].append(f"✓ Positive momentum ({analysis['price_change_5c']:.2f}%)")
+    
+    # SMC buy confirmation
+    if analysis.get('smc_long_setup'):
+        buy_score += 2
+        signal['reason'].append("✓ SMC long setup (OB + FVG + Confirmation)")
+    
+    if analysis.get('smc_bullish_ob'):
+        buy_score += 1
+        signal['reason'].append("✓ SMC bullish order block")
+    
+    if analysis.get('smc_choch_bullish'):
+        buy_score += 2
+        signal['reason'].append("✓ SMC Change of Character (Bullish)")
+    
+    # === SELL SIGNAL LOGIC ===
+    sell_score = 0
+    
+    # HalfTrend confirmation
+    if analysis.get('halftrend_trend') == 'DOWNTREND':
+        sell_score += 2
+        signal['reason'].append("⚠ HalfTrend downtrend")
+    
+    if analysis.get('halftrend_sell_signal') or analysis.get('halftrend_recent_sell'):
+        sell_score += 2
+        signal['reason'].append("⚠ HalfTrend sell signal")
+    
+    # Parabolic SAR confirmation
+    if analysis.get('psar_trend') == 'DOWNTREND':
+        sell_score += 2
+        signal['reason'].append("⚠ Parabolic SAR downtrend")
+    
+    if analysis.get('psar_sell_signal') or analysis.get('psar_recent_sell'):
+        sell_score += 1
+        signal['reason'].append("⚠ Parabolic SAR reversal")
+    
+    # Swift Algo confirmation
+    if analysis.get('swift_strong_bearish'):
+        sell_score += 3
+        signal['reason'].append("⚠ Swift Algo strong bearish")
+    
+    if analysis.get('swift_short_signal') or analysis.get('swift_strong_short'):
+        sell_score += 2
+        signal['reason'].append("⚠ Swift Algo short signal")
+    
+    if analysis.get('swift_bearish_reversal'):
+        sell_score += 1
+        signal['reason'].append("⚠ Swift Algo bearish reversal")
+    
+    if analysis['trend_aligned'] and analysis['trend'] == 'DOWNTREND':
+        sell_score += 3
+        signal['reason'].append("⚠ Confirmed downtrend (both SBST levels)")
+    
+    if analysis['current_sell_signal'] or analysis['recent_sell']:
+        sell_score += 2
+        signal['reason'].append("⚠ SBST sell signal triggered")
+    
+    if analysis['current_sell_confirm'] or analysis['recent_sell_confirm']:
+        sell_score += 2
+        signal['reason'].append("⚠ SBST sell confirmed (Level 2)")
+    
+    if rsi and rsi > 75:
+        sell_score += 1
+        signal['reason'].append(f"⚠ RSI overbought ({rsi:.1f})")
+    
+    if macd_hist and macd_hist < 0:
+        sell_score += 1
+        signal['reason'].append("⚠ MACD bearish")
+    
+    if analysis['price_change_5c'] < -2:
+        sell_score += 1
+        signal['reason'].append(f"⚠ Negative momentum ({analysis['price_change_5c']:.2f}%)")
+    
+    # SMC sell confirmation
+    if analysis.get('smc_short_setup'):
+        sell_score += 2
+        signal['reason'].append("⚠ SMC short setup (OB + FVG + Confirmation)")
+    
+    if analysis.get('smc_bearish_ob'):
+        sell_score += 1
+        signal['reason'].append("⚠ SMC bearish order block")
+    
+    if analysis.get('smc_choch_bearish'):
+        sell_score += 2
+        signal['reason'].append("⚠ SMC Change of Character (Bearish)")
+    
+    # Calculate weighted confidence
+    weighted_conf = calculate_weighted_confidence(analysis)
+    signal['weighted_confidence'] = weighted_conf
+    
+    # Apply divergence impacts
+    confidence_adjustment = 1.0
+    if divergences:
+        for div in divergences:
+            confidence_adjustment += div['confidence_impact'] / 100
+            signal['reason'].append(f"  ⚠️  {div['type']}: {div['description']}")
+    
+    confidence_adjustment = max(0.5, min(1.5, confidence_adjustment))  # 50%-150% range
+    
+    # === DECISION ===
+    if buy_score >= 4 and buy_score > sell_score + 2:  # Lowered from 6 to 4, with 2-point margin
+        signal['action'] = 'BUY'
+        base_confidence = min(buy_score * 12, 95)  # More aggressive confidence
+        # Blend original scoring with normalized weighted confidence
+        if use_weighted_confidence:
+            signal['confidence'] = int((base_confidence * 0.6 + weighted_conf * 0.4) * confidence_adjustment)
+        else:
+            signal['confidence'] = int(base_confidence * confidence_adjustment)
+        signal['confidence'] = min(95, max(30, signal['confidence']))  # Clamp 30-95
+        signal['entry'] = price
+        
+        atr = analysis.get('atr') or 0
+        # Prefer SBST support but validate it's below entry; otherwise fallback to ATR-based stop
+        proposed_sl = analysis.get('up_level')
+        if proposed_sl is None or proposed_sl >= price or proposed_sl <= 0:
+            fallback = price - (atr if atr > 0 else abs(price) * 0.005)
+            signal['stop_loss'] = max(0, fallback)
+        else:
+            signal['stop_loss'] = proposed_sl
+        
+        signal['take_profit_1'] = price + (atr * 1.5 if atr > 0 else abs(price) * 0.01)
+        signal['take_profit_2'] = price + (atr * 3.0 if atr > 0 else abs(price) * 0.02)
+        
+        risk = price - signal['stop_loss']
+        reward1 = signal['take_profit_1'] - price
+        signal['risk_reward'] = reward1 / risk if risk > 0 else 1.0
+        
+    elif sell_score >= 4 and sell_score > buy_score + 2:  # Lowered from 6 to 4
+        signal['action'] = 'SELL'
+        base_confidence = min(sell_score * 12, 95)  # More aggressive confidence
+        # Blend original scoring with normalized weighted confidence
+        if use_weighted_confidence:
+            signal['confidence'] = int((base_confidence * 0.6 + weighted_conf * 0.4) * confidence_adjustment)
+        else:
+            signal['confidence'] = int(base_confidence * confidence_adjustment)
+        signal['confidence'] = min(95, max(30, signal['confidence']))  # Clamp 30-95
+        signal['entry'] = price
+        
+        atr = analysis.get('atr') or 0
+        # Prefer SBST resistance but validate it's above entry; otherwise fallback to ATR-based stop
+        proposed_sl = analysis.get('dn_level')
+        if proposed_sl is None or proposed_sl <= price:
+            signal['stop_loss'] = price + (atr if atr > 0 else abs(price) * 0.005)
+        else:
+            signal['stop_loss'] = proposed_sl
+        
+        signal['take_profit_1'] = price - (atr * 1.5 if atr > 0 else abs(price) * 0.01)
+        signal['take_profit_2'] = price - (atr * 3.0 if atr > 0 else abs(price) * 0.02)
+        
+        risk = signal['stop_loss'] - price
+        reward1 = price - signal['take_profit_1']
+        signal['risk_reward'] = reward1 / risk if risk > 0 else 1.0
+        
+    else:
+        signal['action'] = 'WAIT'
+        signal['confidence'] = 0
+        if not signal['reason']:
+            signal['reason'].append("⏸ No clear setup")
+            signal['reason'].append(f"  Buy score: {buy_score} | Sell score: {sell_score} (threshold: 4)")
+    
+    return signal
+
+
+def generate_trade_signal_simple(
+    analysis,
+    rsi_low: float = 45,
+    rsi_high: float = 65,
+    adx_min: float = 20,
+    require_macd: bool = True,
+):
+    """Lightweight rule-set using SBST + RSI/MACD/ADX.
+    Rules (configurable):
+      - BUY: trend_aligned & trend==UPTREND & (MACD_hist>0 if require_macd) & rsi_low<=RSI<=rsi_high & ADX>=adx_min
+      - SELL: trend_aligned & trend==DOWNTREND & (MACD_hist<0 if require_macd) & rsi_low<=RSI<=rsi_high & ADX>=adx_min
+    Confidence starts at 70 and scales with ADX; SL uses SBST levels with ATR fallback.
+    """
+    if not analysis:
+        return None
+    
+    price = analysis.get('price')
+    rsi = analysis.get('rsi') or 0
+    macd_hist = analysis.get('macd_hist') or 0
+    adx = analysis.get('adx') or 0
+    trend = analysis.get('trend')
+    aligned = analysis.get('trend_aligned', False)
+    atr = analysis.get('atr') or 0
+    
+    macd_buy_ok = (macd_hist > 0) if require_macd else True
+    macd_sell_ok = (macd_hist < 0) if require_macd else True
+    rsi_ok = (rsi_low <= rsi <= rsi_high)
+    adx_ok = (adx >= adx_min)
+
+    buy_cond = aligned and trend == 'UPTREND' and macd_buy_ok and rsi_ok and adx_ok
+    sell_cond = aligned and trend == 'DOWNTREND' and macd_sell_ok and rsi_ok and adx_ok
+    
+    signal = {
+        'action': 'WAIT',
+        'confidence': 0,
+        'reason': [],
+        'entry': None,
+        'stop_loss': None,
+        'take_profit_1': None,
+        'take_profit_2': None,
+        'risk_reward': None,
+        'weighted_confidence': 0,
+    }
+    
+    # Calculate a simple confidence baseline
+    base_conf = 70 + int(max(0, min(20, (adx - 20))))  # 70-90 depending on ADX strength
+    recent_bonus = 5 if (analysis.get('recent_buy') if buy_cond else analysis.get('recent_sell')) else 0
+    conf = min(95, base_conf + recent_bonus)
+    
+    if buy_cond:
+        signal['action'] = 'BUY'
+        signal['confidence'] = conf
+        signal['entry'] = price
+        # SL: prefer SBST support below entry; else ATR fallback
+        sl = analysis.get('up_level')
+        if sl is None or sl >= price or sl <= 0:
+            sl = price - (atr if atr > 0 else abs(price) * 0.005)
+        signal['stop_loss'] = sl
+        signal['take_profit_1'] = price + (atr * 1.5 if atr > 0 else abs(price) * 0.01)
+        signal['take_profit_2'] = price + (atr * 3.0 if atr > 0 else abs(price) * 0.02)
+        risk = price - sl
+        reward1 = signal['take_profit_1'] - price
+        signal['risk_reward'] = reward1 / risk if risk > 0 else 1.0
+        return signal
+    
+    if sell_cond:
+        signal['action'] = 'SELL'
+        signal['confidence'] = conf
+        signal['entry'] = price
+        sl = analysis.get('dn_level')
+        if sl is None or sl <= price:
+            sl = price + (atr if atr > 0 else abs(price) * 0.005)
+        signal['stop_loss'] = sl
+        signal['take_profit_1'] = price - (atr * 1.5 if atr > 0 else abs(price) * 0.01)
+        signal['take_profit_2'] = price - (atr * 3.0 if atr > 0 else abs(price) * 0.02)
+        risk = sl - price
+        reward1 = price - signal['take_profit_1']
+        signal['risk_reward'] = reward1 / risk if risk > 0 else 1.0
+        return signal
+    
+    # Otherwise wait
+    signal['reason'].append('⏸ Rules not met')
+    return signal
+
+
+def print_analysis(analysis, signal):
+    """Print formatted analysis and trade signal"""
+    
+    print("📊 MARKET DATA")
+    print("-" * 80)
+    print(f"Price: ${analysis['price']:.8f}")
+    print(f"5-Candle Change: {analysis['price_change_5c']:+.2f}%")
+    print(f"ATR: ${analysis['atr']:.8f}")
+    print()
+    
+    print("🎯 SUPERBUYSELLTREND SIGNALS")
+    print("-" * 80)
+    print(f"Trend Level 1: {analysis['trend']}")
+    print(f"Trend Level 2: {analysis['trend_confirmed']}")
+    print(f"Alignment: {'✅ ALIGNED' if analysis['trend_aligned'] else '⚠️ NOT ALIGNED'}")
+    print(f"Current Buy Signal: {'🟢 YES' if analysis['current_buy_signal'] else 'No'}")
+    print(f"Current Sell Signal: {'🔴 YES' if analysis['current_sell_signal'] else 'No'}")
+    print(f"Buy Confirmed: {'🟢 YES' if analysis['current_buy_confirm'] else 'No'}")
+    print(f"Sell Confirmed: {'🔴 YES' if analysis['current_sell_confirm'] else 'No'}")
+    print()
+    
+    print("📈 TECHNICAL INDICATORS")
+    print("-" * 80)
+    print(f"RSI (14): {analysis['rsi']:.2f}")
+    print(f"MACD Histogram: {analysis['macd_hist']:.8f}")
+    print(f"ADX (14): {analysis['adx']:.2f}")
+    print(f"EMA 10: ${analysis['ema_10']:.8f}")
+    print(f"EMA 20: ${analysis['ema_20']:.8f}")
+    print()
+    
+    print("🔷 HALFTREND INDICATOR")
+    print("-" * 80)
+    print(f"HalfTrend: ${analysis.get('halftrend', 0):.8f}")
+    print(f"Trend: {analysis.get('halftrend_trend', 'N/A')}")
+    print(f"ATR High: ${analysis.get('halftrend_atr_high', 0):.8f}")
+    print(f"ATR Low: ${analysis.get('halftrend_atr_low', 0):.8f}")
+    print(f"Buy Signal: {'🟢 YES' if analysis.get('halftrend_buy_signal') else 'No'}")
+    print(f"Sell Signal: {'🔴 YES' if analysis.get('halftrend_sell_signal') else 'No'}")
+    print()
+    
+    print("🎹 PARABOLIC SAR")
+    print("-" * 80)
+    print(f"SAR: ${analysis.get('psar', 0):.8f}")
+    print(f"Trend: {analysis.get('psar_trend', 'N/A')}")
+    print(f"Acceleration Factor: {analysis.get('psar_af', 0):.4f}")
+    print(f"Buy Signal: {'🟢 YES' if analysis.get('psar_buy_signal') else 'No'}")
+    print(f"Sell Signal: {'🔴 YES' if analysis.get('psar_sell_signal') else 'No'}")
+    print()
+    
+    print("🛠 SWIFT ALGO PRO")
+    print("-" * 80)
+    print(f"Trend: {('BULLISH' if analysis.get('swift_strong_bullish') else 'BEARISH' if analysis.get('swift_strong_bearish') else 'SIDEWAYS')}")
+    print(f"Long Signal: {'🟢 YES' if analysis.get('swift_long_signal') else 'No'}")
+    print(f"Short Signal: {'🔴 YES' if analysis.get('swift_short_signal') else 'No'}")
+    print(f"Strong Long: {'🟢 YES' if analysis.get('swift_strong_long') else 'No'}")
+    print(f"Strong Short: {'🔴 YES' if analysis.get('swift_strong_short') else 'No'}")
+    print(f"Bullish Reversal: {'🟢 YES' if analysis.get('swift_bullish_reversal') else 'No'}")
+    print(f"Bearish Reversal: {'🔴 YES' if analysis.get('swift_bearish_reversal') else 'No'}")
+    print(f"EMA 9/21/50: ${analysis.get('swift_ema9', 0):.8f} / ${analysis.get('swift_ema21', 0):.8f} / ${analysis.get('swift_ema50', 0):.8f}")
+    print()
+    
+    print("🏛️  SMART MONEY CONCEPTS (SMC)")
+    print("-" * 80)
+    print(f"Market Trend: {analysis.get('smc_trend', 'N/A').upper()}")
+    print(f"CHoCH Bullish: {'🟢 YES' if analysis.get('smc_choch_bullish') else 'No'}")
+    print(f"CHoCH Bearish: {'🔴 YES' if analysis.get('smc_choch_bearish') else 'No'}")
+    print(f"Bullish Order Block: {'🟢 YES' if analysis.get('smc_bullish_ob') else 'No'}")
+    if analysis.get('smc_bullish_ob_price'):
+        print(f"  Price: ${analysis.get('smc_bullish_ob_price'):.8f}")
+    print(f"Bearish Order Block: {'🔴 YES' if analysis.get('smc_bearish_ob') else 'No'}")
+    if analysis.get('smc_bearish_ob_price'):
+        print(f"  Price: ${analysis.get('smc_bearish_ob_price'):.8f}")
+    print(f"Bullish FVG: {'🟢 YES' if analysis.get('smc_bullish_fvg') else 'No'}")
+    print(f"Bearish FVG: {'🔴 YES' if analysis.get('smc_bearish_fvg') else 'No'}")
+    print(f"Liquidity Sweep Bull: {'🟢 YES' if analysis.get('smc_liq_sweep_bull') else 'No'}")
+    print(f"Liquidity Sweep Bear: {'🔴 YES' if analysis.get('smc_liq_sweep_bear') else 'No'}")
+    print(f"Long Setup: {'🟢 YES' if analysis.get('smc_long_setup') else 'No'}")
+    print(f"Short Setup: {'🔴 YES' if analysis.get('smc_short_setup') else 'No'}")
+    print()
+    
+    print("🔄 NRTR (Nick Rypock Trailing Reverse)")
+    print("-" * 80)
+    print(f"NRTR Value: ${analysis.get('nrtr_value', 0):.8f}")
+    print(f"Trend: {analysis.get('nrtr_trend', 'N/A')}")
+    print(f"Buy Signal: {'🟢 YES' if analysis.get('nrtr_buy_signal') else 'No'}")
+    print(f"Sell Signal: {'🔴 YES' if analysis.get('nrtr_sell_signal') else 'No'}")
+    print()
+    
+    print("🎚️ SUPPORT/RESISTANCE LEVELS")
+    print("-" * 80)
+    print(f"Level 1 Support: ${analysis['up_level']:.8f}")
+    print(f"Level 1 Resistance: ${analysis['dn_level']:.8f}")
+    print(f"Level 2 Support: ${analysis['upx_level']:.8f}")
+    print(f"Level 2 Resistance: ${analysis['dnx_level']:.8f}")
+    print()
+    
+    print("🚦 TRADE SIGNAL")
+    print("=" * 80)
+    
+    if signal['action'] == 'BUY':
+        print(f"🟢 {signal['action']} | Confidence: {signal['confidence']}%")
+    elif signal['action'] == 'SELL':
+        print(f"🔴 {signal['action']} | Confidence: {signal['confidence']}%")
+    else:
+        print(f"⏸️  {signal['action']}")
+    
+    print()
+    print("Reasoning:")
+    for reason in signal['reason']:
+        print(f"  {reason}")
+    
+    if signal['action'] in ['BUY', 'SELL']:
+        print()
+        print("📋 TRADE PLAN")
+        print("-" * 80)
+        print(f"Entry: ${signal['entry']:.8f}")
+        print(f"Stop Loss: ${signal['stop_loss']:.8f}")
+        print(f"Take Profit 1: ${signal['take_profit_1']:.8f} (Risk:Reward = 1:{signal['risk_reward']:.2f})")
+        print(f"Take Profit 2: ${signal['take_profit_2']:.8f}")
+        
+        risk_pct = abs((signal['stop_loss'] - signal['entry']) / signal['entry'] * 100)
+        print(f"\nRisk: {risk_pct:.3f}% | Recommended position size: Max 1-2% account risk")
+    
+    print()
+
+
+if __name__ == "__main__":
+    import sys
+    
+    if len(sys.argv) > 1:
+        command = sys.argv[1].lower()
+        
+        if command == "list":
+            # List available symbols
+            exchange = sys.argv[2] if len(sys.argv) > 2 else "binance"
+            limit = int(sys.argv[3]) if len(sys.argv) > 3 else 50
+            list_available_symbols(exchange, limit)
+            
+        else:
+            # Analyze crypto pair
+            symbol = sys.argv[1]
+            timeframe = sys.argv[2] if len(sys.argv) > 2 else "5m"
+            
+            analysis = analyze_crypto_binance(symbol, timeframe=timeframe, periods=10)
+            
+            if analysis:
+                signal = generate_trade_signal(analysis)
+                print_analysis(analysis, signal)
+                
+                print("\n" + "="*80)
+                print("⚠️  DISCLAIMER")
+                print("="*80)
+                print("This is an automated technical analysis tool, not financial advice.")
+                print("Always do your own research and never risk more than you can afford to lose.")
+                print("Crypto trading carries significant risk.")
+            else:
+                print("❌ Could not analyze symbol.")
+    else:
+        print("Binance Crypto Trading Signal Generator")
+        print("="*80)
+        print("\nUsage:")
+        print("  python binance_crypto.py <SYMBOL> [TIMEFRAME]")
+        print("  python binance_crypto.py list [exchange] [limit]")
+        print("\nExamples:")
+        print("  python binance_crypto.py APR/USDT 5m")
+        print("  python binance_crypto.py BTC/USDT 15m")
+        print("  python binance_crypto.py ETH/USDT 1h")
+        print("  python binance_crypto.py SOL/USDT 4h")
+        print("  python binance_crypto.py list binance 50")
+        print("  python binance_crypto.py list kraken 30")
+        print("\nAvailable timeframes: 1m, 5m, 15m, 30m, 1h, 4h, 1d, 1w, 1M")
