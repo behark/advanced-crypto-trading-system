@@ -281,7 +281,7 @@ class Backtester:
 
 def main():
     """Example usage"""
-    backtester = Backtester('LAB/USDT:USDT', lookback_days=180)
+    backtester = Backtester('ETH/USDT:USDT', lookback_days=180)
     results = backtester.backtest()
     if results:
         print(results)

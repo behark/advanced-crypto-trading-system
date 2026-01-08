@@ -66,7 +66,7 @@ def main():
 
     for i in range(1, args.max_iter + 1):
         res = run_once(args.symbol, args.timeframe, args.min_conf, args.min_wconf)
-        now = datetime.now(datetime.UTC).strftime('%Y-%m-%d %H:%M:%S')
+        now = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
         if res.get('status') == 'no_data':
             print(f"[{now}] {args.symbol} {args.timeframe} - no data")
         else:

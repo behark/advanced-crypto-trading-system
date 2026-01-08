@@ -1,0 +1,4262 @@
+[
+  {
+    "signal_id": "2025-12-07T19:39:20.429632_LAB/USDT_LONG",
+    "timestamp": "2025-12-07T19:39:20.429632",
+    "symbol": "LAB/USDT",
+    "direction": "LONG",
+    "entry": 0.10011,
+    "stop_loss": 0.09988956461127087,
+    "take_profit": 0.10378262381971708,
+    "status": "pending",
+    "position_id": "PAPER_1765132760429_LAB_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:42:20.077732_LAB/USDT_LONG",
+    "timestamp": "2025-12-07T19:42:20.077732",
+    "symbol": "LAB/USDT",
+    "direction": "LONG",
+    "entry": 0.10044,
+    "stop_loss": 0.09988956461127087,
+    "take_profit": 0.10411262381971707,
+    "status": "pending",
+    "position_id": "PAPER_1765132940077_LAB_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:43:59.573102_LAB/USDT_LONG",
+    "timestamp": "2025-12-07T19:43:59.573102",
+    "symbol": "LAB/USDT",
+    "direction": "LONG",
+    "entry": 0.10045,
+    "stop_loss": 0.10033130306943927,
+    "take_profit": 0.10109825275393404,
+    "status": "pending",
+    "position_id": "PAPER_1765133039572_LAB_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:45:12.802930_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T19:45:12.802930",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91364.63,
+    "stop_loss": 91190.5574605891,
+    "take_profit": 92544.50250992768,
+    "status": "pending",
+    "position_id": "PAPER_1765133112802_BTC_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:45:17.878165_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T19:45:17.878165",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3132.92,
+    "stop_loss": 3117.974718771211,
+    "take_profit": 3202.5221691321685,
+    "status": "pending",
+    "position_id": "PAPER_1765133117878_ETH_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:45:24.134001_MINA/USDT_LONG",
+    "timestamp": "2025-12-07T19:45:24.134001",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0963,
+    "stop_loss": 0.09573404869305502,
+    "take_profit": 0.09843056785068408,
+    "status": "pending",
+    "position_id": "PAPER_1765133124133_MINA_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:47:12.850693_LAB/USDT_SHORT",
+    "timestamp": "2025-12-07T19:47:12.850693",
+    "symbol": "LAB/USDT",
+    "direction": "SHORT",
+    "entry": 0.09967,
+    "stop_loss": 0.09982992406237878,
+    "take_profit": 0.09891775075736385,
+    "status": "pending",
+    "position_id": "PAPER_1765133232850_LAB_USDT",
+    "metadata": {
+      "confidence": 53,
+      "weighted_confidence": 50.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:48:06.466458_LAB/USDT_SHORT",
+    "timestamp": "2025-12-07T19:48:06.466458",
+    "symbol": "LAB/USDT",
+    "direction": "SHORT",
+    "entry": 0.09968,
+    "stop_loss": 0.10038527982696396,
+    "take_profit": 0.0977678466781194,
+    "status": "pending",
+    "position_id": "PAPER_1765133286466_LAB_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:49:03.603643_LAB/USDT_SHORT",
+    "timestamp": "2025-12-07T19:49:03.603643",
+    "symbol": "LAB/USDT",
+    "direction": "SHORT",
+    "entry": 0.0996,
+    "stop_loss": 0.10038527982696396,
+    "take_profit": 0.09768784667811939,
+    "status": "pending",
+    "position_id": "PAPER_1765133343603_LAB_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:50:14.047904_LAB/USDT_SHORT",
+    "timestamp": "2025-12-07T19:50:14.047904",
+    "symbol": "LAB/USDT",
+    "direction": "SHORT",
+    "entry": 0.09977,
+    "stop_loss": 0.10023335184426756,
+    "take_profit": 0.09795800048682515,
+    "status": "pending",
+    "position_id": "PAPER_1765133414047_LAB_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:53:42.806303_LAB/USDT_SHORT",
+    "timestamp": "2025-12-07T19:53:42.806303",
+    "symbol": "LAB/USDT",
+    "direction": "SHORT",
+    "entry": 0.09991,
+    "stop_loss": 0.10032615184426757,
+    "take_profit": 0.09806371477253945,
+    "status": "pending",
+    "position_id": "PAPER_1765133622806_LAB_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:55:39.029193_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T19:55:39.029193",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91348.39,
+    "stop_loss": 91190.5574605891,
+    "take_profit": 92562.51822421339,
+    "status": "pending",
+    "position_id": "PAPER_1765133739029_BTC_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:55:44.252023_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T19:55:44.252023",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3130.63,
+    "stop_loss": 3117.974718771211,
+    "take_profit": 3202.417883417883,
+    "status": "pending",
+    "position_id": "PAPER_1765133744251_ETH_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T19:55:49.282415_MINA/USDT_LONG",
+    "timestamp": "2025-12-07T19:55:49.282415",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.096,
+    "stop_loss": 0.0957211652145056,
+    "take_profit": 0.09823771070782694,
+    "status": "pending",
+    "position_id": "PAPER_1765133749282_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:04:59.718391_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T20:04:59.718391",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91393.07,
+    "stop_loss": 91190.5574605891,
+    "take_profit": 92564.62131023897,
+    "status": "pending",
+    "position_id": "PAPER_1765134299718_BTC_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:05:06.286963_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T20:05:06.286963",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3127.73,
+    "stop_loss": 3117.974718771211,
+    "take_profit": 3196.196299908442,
+    "status": "pending",
+    "position_id": "PAPER_1765134306286_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:05:11.281371_MINA/USDT_LONG",
+    "timestamp": "2025-12-07T20:05:11.281371",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0958,
+    "stop_loss": 0.0957211652145056,
+    "take_profit": 0.09804777218788016,
+    "status": "pending",
+    "position_id": "PAPER_1765134311281_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:15:24.222347_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T20:15:24.222347",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91531.11,
+    "stop_loss": 91212.19169176945,
+    "take_profit": 92661.24371665047,
+    "status": "pending",
+    "position_id": "PAPER_1765134924222_BTC_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:15:30.022931_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T20:15:30.022931",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3133.18,
+    "stop_loss": 3117.974718771211,
+    "take_profit": 3198.6570233843695,
+    "status": "pending",
+    "position_id": "PAPER_1765134930022_ETH_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:15:34.896801_MINA/USDT_LONG",
+    "timestamp": "2025-12-07T20:15:34.896801",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0957,
+    "stop_loss": 0.09514509944137453,
+    "take_profit": 0.09780711499078673,
+    "status": "pending",
+    "position_id": "PAPER_1765134934896_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:19:52.728943_APR/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T20:19:52.728943",
+    "symbol": "APR/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.13209,
+    "stop_loss": 0.13267795785350395,
+    "take_profit": 0.12978007166200745,
+    "status": "pending",
+    "position_id": "PAPER_1765135192728_APR_USDT:USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:21:03.905227_APR/USDT_SHORT",
+    "timestamp": "2025-12-07T20:21:03.905227",
+    "symbol": "APR/USDT",
+    "direction": "SHORT",
+    "entry": 0.13216,
+    "stop_loss": 0.13267446206815356,
+    "take_profit": 0.13000220940043547,
+    "status": "pending",
+    "position_id": "PAPER_1765135263905_APR_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:21:41.593232_APR/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T20:21:41.593232",
+    "symbol": "APR/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.13213,
+    "stop_loss": 0.13267795785350395,
+    "take_profit": 0.12996792368614973,
+    "status": "pending",
+    "position_id": "PAPER_1765135301593_APR_USDT:USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:21:54.386811_POWER/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T20:21:54.386811",
+    "symbol": "POWER/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.20434,
+    "stop_loss": 0.2053633564410246,
+    "take_profit": 0.19205953913829785,
+    "status": "pending",
+    "position_id": "PAPER_1765135314386_POWER_USDT:USDT",
+    "metadata": {
+      "confidence": 45,
+      "weighted_confidence": 38.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:22:41.595323_POWER/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T20:22:41.595323",
+    "symbol": "POWER/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.20405,
+    "stop_loss": 0.2053633564410246,
+    "take_profit": 0.19176953913829786,
+    "status": "pending",
+    "position_id": "PAPER_1765135361595_POWER_USDT:USDT",
+    "metadata": {
+      "confidence": 45,
+      "weighted_confidence": 38.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:22:56.131053_MINA/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T20:22:56.131053",
+    "symbol": "MINA/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.0954,
+    "stop_loss": 0.09572878558426738,
+    "take_profit": 0.09410064261362841,
+    "status": "pending",
+    "position_id": "PAPER_1765135376130_MINA_USDT:USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:23:02.277415_APR/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T20:23:02.277415",
+    "symbol": "APR/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.1319,
+    "stop_loss": 0.13250886206815354,
+    "take_profit": 0.12965006654329259,
+    "status": "pending",
+    "position_id": "PAPER_1765135382277_APR_USDT:USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:23:46.775464_POWER/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T20:23:46.775464",
+    "symbol": "POWER/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.20485,
+    "stop_loss": 0.2053633564410246,
+    "take_profit": 0.19240025342401215,
+    "status": "pending",
+    "position_id": "PAPER_1765135426775_POWER_USDT:USDT",
+    "metadata": {
+      "confidence": 45,
+      "weighted_confidence": 38.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:25:48.356850_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T20:25:48.356850",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91292.62,
+    "stop_loss": 91190.5574605891,
+    "take_profit": 92470.99800236475,
+    "status": "pending",
+    "position_id": "PAPER_1765135548356_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:25:53.369372_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T20:25:53.369372",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3124.45,
+    "stop_loss": 3117.974718771211,
+    "take_profit": 3191.1870233843697,
+    "status": "pending",
+    "position_id": "PAPER_1765135553369_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:25:58.078840_MINA/USDT_LONG",
+    "timestamp": "2025-12-07T20:25:58.078840",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0956,
+    "stop_loss": 0.09508709944137453,
+    "take_profit": 0.0977285435622153,
+    "status": "pending",
+    "position_id": "PAPER_1765135558078_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:26:55.036342_MON/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T20:26:55.036342",
+    "symbol": "MON/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.02662,
+    "stop_loss": 0.026700244483596276,
+    "take_profit": 0.026130087907983175,
+    "status": "pending",
+    "position_id": "PAPER_1765135615036_MON_USDT:USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:27:20.289681_CLO/USDT:USDT_LONG",
+    "timestamp": "2025-12-07T20:27:20.289681",
+    "symbol": "CLO/USDT:USDT",
+    "direction": "LONG",
+    "entry": 0.4559,
+    "stop_loss": 0.4529460226528014,
+    "take_profit": 0.46628409752531425,
+    "status": "pending",
+    "position_id": "PAPER_1765135640289_CLO_USDT:USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:36:12.003030_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T20:36:12.003030",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91335.83,
+    "stop_loss": 91190.5574605891,
+    "take_profit": 92467.17615525707,
+    "status": "pending",
+    "position_id": "PAPER_1765136172002_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:36:17.526265_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T20:36:17.526265",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3135.6,
+    "stop_loss": 3117.974718771211,
+    "take_profit": 3199.526980897731,
+    "status": "pending",
+    "position_id": "PAPER_1765136177526_ETH_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:36:23.399356_MINA/USDT_LONG",
+    "timestamp": "2025-12-07T20:36:23.399356",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0956,
+    "stop_loss": 0.09507018949723706,
+    "take_profit": 0.09763925983838365,
+    "status": "pending",
+    "position_id": "PAPER_1765136183399_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:40:30.478461_POWER/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T20:40:30.478461",
+    "symbol": "POWER/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.19983,
+    "stop_loss": 0.20315641204037455,
+    "take_profit": 0.188954915869513,
+    "status": "pending",
+    "position_id": "PAPER_1765136430478_POWER_USDT:USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:46:36.643772_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T20:46:36.643772",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91378.74,
+    "stop_loss": 91190.5574605891,
+    "take_profit": 92452.28617477953,
+    "status": "pending",
+    "position_id": "PAPER_1765136796643_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:46:41.623202_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T20:46:41.623202",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3137.82,
+    "stop_loss": 3124.2638633872125,
+    "take_profit": 3199.0018904254443,
+    "status": "pending",
+    "position_id": "PAPER_1765136801623_ETH_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:46:47.212238_MINA/USDT_LONG",
+    "timestamp": "2025-12-07T20:46:47.212238",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0956,
+    "stop_loss": 0.09520717054751335,
+    "take_profit": 0.09753645556421343,
+    "status": "pending",
+    "position_id": "PAPER_1765136807212_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:57:02.788402_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T20:57:02.788402",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91292.14,
+    "stop_loss": 91190.5574605891,
+    "take_profit": 92380.57688906524,
+    "status": "pending",
+    "position_id": "PAPER_1765137422788_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:57:08.812531_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T20:57:08.812531",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3135.19,
+    "stop_loss": 3122.0076633872127,
+    "take_profit": 3197.2054618540155,
+    "status": "pending",
+    "position_id": "PAPER_1765137428812_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T20:57:14.732183_MINA/USDT_LONG",
+    "timestamp": "2025-12-07T20:57:14.732183",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0958,
+    "stop_loss": 0.09520717054751335,
+    "take_profit": 0.09773645556421343,
+    "status": "pending",
+    "position_id": "PAPER_1765137434732_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:07:29.075539_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T21:07:29.075539",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91389.99,
+    "stop_loss": 91190.5574605891,
+    "take_profit": 92432.55685617283,
+    "status": "pending",
+    "position_id": "PAPER_1765138049075_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:07:35.305293_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T21:07:35.305293",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3135.17,
+    "stop_loss": 3122.0076633872127,
+    "take_profit": 3194.635071721586,
+    "status": "pending",
+    "position_id": "PAPER_1765138055305_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:17:58.340097_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T21:17:58.340097",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91382.2,
+    "stop_loss": 91190.5574605891,
+    "take_profit": 92369.39891746659,
+    "status": "pending",
+    "position_id": "PAPER_1765138678340_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:18:03.611272_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T21:18:03.611272",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3136.81,
+    "stop_loss": 3123.741947343642,
+    "take_profit": 3193.0255257822887,
+    "status": "pending",
+    "position_id": "PAPER_1765138683611_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:28:23.285723_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T21:28:23.285723",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91444.86,
+    "stop_loss": 91190.5574605891,
+    "take_profit": 92448.87177460946,
+    "status": "pending",
+    "position_id": "PAPER_1765139303285_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:28:28.290523_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T21:28:28.290523",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3143.18,
+    "stop_loss": 3126.833147343642,
+    "take_profit": 3200.9726686394315,
+    "status": "pending",
+    "position_id": "PAPER_1765139308290_ETH_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:38:45.993161_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T21:38:45.993161",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91384.49,
+    "stop_loss": 91190.5574605891,
+    "take_profit": 92339.43879070878,
+    "status": "pending",
+    "position_id": "PAPER_1765139925993_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:38:50.958358_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T21:38:50.958358",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3138.52,
+    "stop_loss": 3126.833147343642,
+    "take_profit": 3193.761763736615,
+    "status": "pending",
+    "position_id": "PAPER_1765139930958_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:49:09.004916_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T21:49:09.004916",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91448.58,
+    "stop_loss": 91245.69617349604,
+    "take_profit": 92362.98765259693,
+    "status": "pending",
+    "position_id": "PAPER_1765140549004_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:49:14.146534_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T21:49:14.146534",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3141.6,
+    "stop_loss": 3129.3867993483505,
+    "take_profit": 3193.380821428898,
+    "status": "pending",
+    "position_id": "PAPER_1765140554146_ETH_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:59:32.761729_BTC/USDT_LONG",
+    "timestamp": "2025-12-07T21:59:32.761729",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91453.99,
+    "stop_loss": 91205.85597349606,
+    "take_profit": 92383.11693831121,
+    "status": "pending",
+    "position_id": "PAPER_1765141172761_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T21:59:38.317625_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T21:59:38.317625",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3142.02,
+    "stop_loss": 3127.8381993483504,
+    "take_profit": 3194.3729642860408,
+    "status": "pending",
+    "position_id": "PAPER_1765141178317_ETH_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:10:01.402166_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T22:10:01.402166",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3132.5,
+    "stop_loss": 3127.8381993483504,
+    "take_profit": 3184.0106096941804,
+    "status": "pending",
+    "position_id": "PAPER_1765141801402_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:20:20.697390_BTC/USDT_SHORT",
+    "timestamp": "2025-12-07T22:20:20.697390",
+    "symbol": "BTC/USDT",
+    "direction": "SHORT",
+    "entry": 91204.06,
+    "stop_loss": 91459.62519146819,
+    "take_profit": 90343.70947666022,
+    "status": "pending",
+    "position_id": "PAPER_1765142420697_BTC_USDT",
+    "metadata": {
+      "confidence": 56,
+      "weighted_confidence": 58.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:20:26.288684_ETH/USDT_LONG",
+    "timestamp": "2025-12-07T22:20:26.288684",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3131.2,
+    "stop_loss": 3127.8381993483504,
+    "take_profit": 3179.9462804303103,
+    "status": "pending",
+    "position_id": "PAPER_1765142426288_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:23:59.213662_POWER/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T22:23:59.213662",
+    "symbol": "POWER/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.19944,
+    "stop_loss": 0.1995720991234104,
+    "take_profit": 0.19186476893323628,
+    "status": "pending",
+    "position_id": "PAPER_1765142639213_POWER_USDT:USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:24:16.728471_MON/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T22:24:16.728471",
+    "symbol": "MON/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.02644,
+    "stop_loss": 0.026598414782359036,
+    "take_profit": 0.026054999325654953,
+    "status": "pending",
+    "position_id": "PAPER_1765142656728_MON_USDT:USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:29:14.899336_MON/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T22:29:14.899336",
+    "symbol": "MON/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.02639,
+    "stop_loss": 0.026501053304123133,
+    "take_profit": 0.0259988259044347,
+    "status": "pending",
+    "position_id": "PAPER_1765142954899_MON_USDT:USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:30:47.723872_BTC/USDT_SHORT",
+    "timestamp": "2025-12-07T22:30:47.723872",
+    "symbol": "BTC/USDT",
+    "direction": "SHORT",
+    "entry": 90871.14,
+    "stop_loss": 91089.90673232138,
+    "take_profit": 89983.65216710286,
+    "status": "pending",
+    "position_id": "PAPER_1765143047723_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:31:02.531329_ETH/USDT_SHORT",
+    "timestamp": "2025-12-07T22:31:02.531329",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3120.94,
+    "stop_loss": 3130.798063675053,
+    "take_profit": 3072.4075865392015,
+    "status": "pending",
+    "position_id": "PAPER_1765143062531_ETH_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:31:07.384707_MINA/USDT_SHORT",
+    "timestamp": "2025-12-07T22:31:07.384707",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0951,
+    "stop_loss": 0.09550453363935316,
+    "take_profit": 0.09359644161917989,
+    "status": "pending",
+    "position_id": "PAPER_1765143067384_MINA_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:51:30.678331_BTC/USDT_SHORT",
+    "timestamp": "2025-12-07T22:51:30.678331",
+    "symbol": "BTC/USDT",
+    "direction": "SHORT",
+    "entry": 90211.88,
+    "stop_loss": 90622.31301908924,
+    "take_profit": 89208.67711435062,
+    "status": "pending",
+    "position_id": "PAPER_1765144290678_BTC_USDT",
+    "metadata": {
+      "confidence": 62,
+      "weighted_confidence": 79.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:51:35.434545_ETH/USDT_SHORT",
+    "timestamp": "2025-12-07T22:51:35.434545",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3086.02,
+    "stop_loss": 3110.323017307547,
+    "take_profit": 3031.6296977047687,
+    "status": "pending",
+    "position_id": "PAPER_1765144295434_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:51:40.248295_MINA/USDT_SHORT",
+    "timestamp": "2025-12-07T22:51:40.248295",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0936,
+    "stop_loss": 0.09434628027541786,
+    "take_profit": 0.09185638966678944,
+    "status": "pending",
+    "position_id": "PAPER_1765144300248_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T22:52:45.450333_MON/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T22:52:45.450333",
+    "symbol": "MON/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.02595,
+    "stop_loss": 0.026105138725551667,
+    "take_profit": 0.025523489815507068,
+    "status": "pending",
+    "position_id": "PAPER_1765144365450_MON_USDT:USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:01:53.384799_BTC/USDT_SHORT",
+    "timestamp": "2025-12-07T23:01:53.384799",
+    "symbol": "BTC/USDT",
+    "direction": "SHORT",
+    "entry": 90000.0,
+    "stop_loss": 90393.93787718032,
+    "take_profit": 88958.69854495823,
+    "status": "pending",
+    "position_id": "PAPER_1765144913384_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:01:58.269877_ETH/USDT_SHORT",
+    "timestamp": "2025-12-07T23:01:58.269877",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3076.47,
+    "stop_loss": 3095.1651155767927,
+    "take_profit": 3020.344923378918,
+    "status": "pending",
+    "position_id": "PAPER_1765144918269_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:02:03.082032_MINA/USDT_SHORT",
+    "timestamp": "2025-12-07T23:02:03.082032",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.093,
+    "stop_loss": 0.09368485224787607,
+    "take_profit": 0.09115440264977387,
+    "status": "pending",
+    "position_id": "PAPER_1765144923081_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:05:15.399202_CLO/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T23:05:15.399202",
+    "symbol": "CLO/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.4442,
+    "stop_loss": 0.44629630670575826,
+    "take_profit": 0.4360841005860943,
+    "status": "pending",
+    "position_id": "PAPER_1765145115399_CLO_USDT:USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:12:15.875911_BTC/USDT_SHORT",
+    "timestamp": "2025-12-07T23:12:15.875911",
+    "symbol": "BTC/USDT",
+    "direction": "SHORT",
+    "entry": 89592.21,
+    "stop_loss": 89971.97647718033,
+    "take_profit": 88335.6221163868,
+    "status": "pending",
+    "position_id": "PAPER_1765145535875_BTC_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:12:20.714125_ETH/USDT_SHORT",
+    "timestamp": "2025-12-07T23:12:20.714125",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3052.85,
+    "stop_loss": 3073.5645155767925,
+    "take_profit": 2985.7042090932036,
+    "status": "pending",
+    "position_id": "PAPER_1765145540714_ETH_USDT",
+    "metadata": {
+      "confidence": 61,
+      "weighted_confidence": 76.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:12:25.606909_MINA/USDT_SHORT",
+    "timestamp": "2025-12-07T23:12:25.606909",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0928,
+    "stop_loss": 0.09292885224787606,
+    "take_profit": 0.09056868836405957,
+    "status": "pending",
+    "position_id": "PAPER_1765145545606_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:12:45.355781_CLO/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T23:12:45.355781",
+    "symbol": "CLO/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.4391,
+    "stop_loss": 0.4419283067057582,
+    "take_profit": 0.4286587056462713,
+    "status": "pending",
+    "position_id": "PAPER_1765145565355_CLO_USDT:USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:12:56.278509_MON/USDT:USDT_SHORT",
+    "timestamp": "2025-12-07T23:12:56.278509",
+    "symbol": "MON/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.02542,
+    "stop_loss": 0.025657466694997026,
+    "take_profit": 0.02470759991500893,
+    "status": "pending",
+    "position_id": "PAPER_1765145576278_MON_USDT:USDT",
+    "metadata": {
+      "confidence": 57,
+      "weighted_confidence": 63.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:22:38.654787_BTC/USDT_SHORT",
+    "timestamp": "2025-12-07T23:22:38.654787",
+    "symbol": "BTC/USDT",
+    "direction": "SHORT",
+    "entry": 89422.59,
+    "stop_loss": 89737.91262946228,
+    "take_profit": 88185.53482235917,
+    "status": "pending",
+    "position_id": "PAPER_1765146158654_BTC_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:22:43.369265_ETH/USDT_SHORT",
+    "timestamp": "2025-12-07T23:22:43.369265",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3037.44,
+    "stop_loss": 3055.6769640191137,
+    "take_profit": 2971.741051300832,
+    "status": "pending",
+    "position_id": "PAPER_1765146163369_ETH_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:22:48.436411_MINA/USDT_SHORT",
+    "timestamp": "2025-12-07T23:22:48.436411",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0923,
+    "stop_loss": 0.09289796702308847,
+    "take_profit": 0.09014235348091242,
+    "status": "pending",
+    "position_id": "PAPER_1765146168436_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:33:01.122007_BTC/USDT_SHORT",
+    "timestamp": "2025-12-07T23:33:01.122007",
+    "symbol": "BTC/USDT",
+    "direction": "SHORT",
+    "entry": 89755.96,
+    "stop_loss": 89849.80622946228,
+    "take_profit": 88537.3616207621,
+    "status": "pending",
+    "position_id": "PAPER_1765146781121_BTC_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:33:06.147127_ETH/USDT_SHORT",
+    "timestamp": "2025-12-07T23:33:06.147127",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3043.93,
+    "stop_loss": 3058.2289640191134,
+    "take_profit": 2979.918323146691,
+    "status": "pending",
+    "position_id": "PAPER_1765146786147_ETH_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:33:10.992866_MINA/USDT_SHORT",
+    "timestamp": "2025-12-07T23:33:10.992866",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0928,
+    "stop_loss": 0.09292885224787606,
+    "take_profit": 0.09067249149758194,
+    "status": "pending",
+    "position_id": "PAPER_1765146790992_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:43:29.978368_ETH/USDT_SHORT",
+    "timestamp": "2025-12-07T23:43:29.978368",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3052.2,
+    "stop_loss": 3058.2289640191134,
+    "take_profit": 2984.5347517181194,
+    "status": "pending",
+    "position_id": "PAPER_1765147409978_ETH_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:43:34.885479_MINA/USDT_SHORT",
+    "timestamp": "2025-12-07T23:43:34.885479",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0934,
+    "stop_loss": 0.09416631235794887,
+    "take_profit": 0.09110106292615337,
+    "status": "pending",
+    "position_id": "PAPER_1765147414885_MINA_USDT",
+    "metadata": {
+      "confidence": 48,
+      "weighted_confidence": 46.0
+    }
+  },
+  {
+    "signal_id": "2025-12-07T23:53:54.357040_ETH/USDT_SHORT",
+    "timestamp": "2025-12-07T23:53:54.357040",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3045.29,
+    "stop_loss": 3058.2289640191134,
+    "take_profit": 2977.9215551668253,
+    "status": "pending",
+    "position_id": "PAPER_1765148034356_ETH_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:04:19.858559_ETH/USDT_SHORT",
+    "timestamp": "2025-12-08T00:04:19.858559",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3036.06,
+    "stop_loss": 3057.2918217699334,
+    "take_profit": 2965.5013930630726,
+    "status": "pending",
+    "position_id": "PAPER_1765148659858_ETH_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:04:25.401320_MINA/USDT_SHORT",
+    "timestamp": "2025-12-08T00:04:25.401320",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0929,
+    "stop_loss": 0.09354077395983153,
+    "take_profit": 0.0905977459487167,
+    "status": "pending",
+    "position_id": "PAPER_1765148665401_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:14:44.881082_ETH/USDT_SHORT",
+    "timestamp": "2025-12-08T00:14:44.881082",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3034.01,
+    "stop_loss": 3054.654221769934,
+    "take_profit": 2962.105678777358,
+    "status": "pending",
+    "position_id": "PAPER_1765149284880_ETH_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:14:49.831264_MINA/USDT_SHORT",
+    "timestamp": "2025-12-08T00:14:49.831264",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0928,
+    "stop_loss": 0.09341477395983153,
+    "take_profit": 0.09043346023443098,
+    "status": "pending",
+    "position_id": "PAPER_1765149289831_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:25:08.278237_ETH/USDT_SHORT",
+    "timestamp": "2025-12-08T00:25:08.278237",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3046.14,
+    "stop_loss": 3054.654221769934,
+    "take_profit": 2976.2045588646897,
+    "status": "pending",
+    "position_id": "PAPER_1765149908278_ETH_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:25:13.268997_MINA/USDT_SHORT",
+    "timestamp": "2025-12-08T00:25:13.268997",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0931,
+    "stop_loss": 0.09341477395983153,
+    "take_profit": 0.09081678450340015,
+    "status": "pending",
+    "position_id": "PAPER_1765149913268_MINA_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:35:32.180117_ETH/USDT_SHORT",
+    "timestamp": "2025-12-08T00:35:32.180117",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3048.23,
+    "stop_loss": 3054.654221769934,
+    "take_profit": 2981.6289271090486,
+    "status": "pending",
+    "position_id": "PAPER_1765150532180_ETH_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:35:37.519663_MINA/USDT_SHORT",
+    "timestamp": "2025-12-08T00:35:37.519663",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0931,
+    "stop_loss": 0.09341477395983153,
+    "take_profit": 0.09089721826336138,
+    "status": "pending",
+    "position_id": "PAPER_1765150537519_MINA_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:45:50.150136_BTC/USDT_SHORT",
+    "timestamp": "2025-12-08T00:45:50.150136",
+    "symbol": "BTC/USDT",
+    "direction": "SHORT",
+    "entry": 89914.01,
+    "stop_loss": 90067.83104027802,
+    "take_profit": 88699.74235714214,
+    "status": "pending",
+    "position_id": "PAPER_1765151150150_BTC_USDT",
+    "metadata": {
+      "confidence": 36,
+      "weighted_confidence": 41.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:45:55.887952_ETH/USDT_SHORT",
+    "timestamp": "2025-12-08T00:45:55.887952",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3039.53,
+    "stop_loss": 3054.654221769934,
+    "take_profit": 2975.6698710910555,
+    "status": "pending",
+    "position_id": "PAPER_1765151155887_ETH_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:46:09.596428_MINA/USDT_SHORT",
+    "timestamp": "2025-12-08T00:46:09.596428",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0929,
+    "stop_loss": 0.09341477395983153,
+    "take_profit": 0.0907948659384273,
+    "status": "pending",
+    "position_id": "PAPER_1765151169596_MINA_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:56:29.872079_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T00:56:29.872079",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 90366.88,
+    "stop_loss": 89787.43033063733,
+    "take_profit": 91677.269785715,
+    "status": "pending",
+    "position_id": "PAPER_1765151789871_BTC_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T00:56:39.596196_MINA/USDT_SHORT",
+    "timestamp": "2025-12-08T00:56:39.596196",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0934,
+    "stop_loss": 0.09341477395983153,
+    "take_profit": 0.09118772308128449,
+    "status": "pending",
+    "position_id": "PAPER_1765151799596_MINA_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T01:06:52.210597_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T01:06:52.210597",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 90190.98,
+    "stop_loss": 89949.8607775736,
+    "take_profit": 91471.43663775576,
+    "status": "pending",
+    "position_id": "PAPER_1765152412210_BTC_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T01:10:04.267045_RLS/USDT:USDT_LONG",
+    "timestamp": "2025-12-08T01:10:04.267045",
+    "symbol": "RLS/USDT:USDT",
+    "direction": "LONG",
+    "entry": 0.01687,
+    "stop_loss": 0.016771995478626296,
+    "take_profit": 0.01738187991282876,
+    "status": "pending",
+    "position_id": "PAPER_1765152604266_RLS_USDT:USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T01:17:14.649792_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T01:17:14.649792",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 90080.57,
+    "stop_loss": 89869.1479775736,
+    "take_profit": 91317.56973505893,
+    "status": "pending",
+    "position_id": "PAPER_1765153034649_BTC_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T01:27:36.939602_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T01:27:36.939602",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 90251.44,
+    "stop_loss": 89869.1479775736,
+    "take_profit": 91560.2940207732,
+    "status": "pending",
+    "position_id": "PAPER_1765153656939_BTC_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T01:38:01.365373_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T01:38:01.365373",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 90427.62,
+    "stop_loss": 90069.9468718346,
+    "take_profit": 91729.43373357512,
+    "status": "pending",
+    "position_id": "PAPER_1765154281365_BTC_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T01:38:06.216304_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T01:38:06.216304",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3067.94,
+    "stop_loss": 3047.9218651053643,
+    "take_profit": 3133.8412126452863,
+    "status": "pending",
+    "position_id": "PAPER_1765154286216_ETH_USDT",
+    "metadata": {
+      "confidence": 51,
+      "weighted_confidence": 41.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T01:38:11.329708_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T01:38:11.329708",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0936,
+    "stop_loss": 0.0930117643420131,
+    "take_profit": 0.09565039081283468,
+    "status": "pending",
+    "position_id": "PAPER_1765154291329_MINA_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T01:48:24.447168_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T01:48:24.447168",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 90301.5,
+    "stop_loss": 90069.9468718346,
+    "take_profit": 91533.41203831976,
+    "status": "pending",
+    "position_id": "PAPER_1765154904447_BTC_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T01:48:29.230325_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T01:48:29.230325",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3063.82,
+    "stop_loss": 3047.9218651053643,
+    "take_profit": 3126.608268884909,
+    "status": "pending",
+    "position_id": "PAPER_1765154909230_ETH_USDT",
+    "metadata": {
+      "confidence": 51,
+      "weighted_confidence": 41.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T01:58:47.019457_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T01:58:47.019457",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 90395.31,
+    "stop_loss": 90069.9468718346,
+    "take_profit": 91655.78846689119,
+    "status": "pending",
+    "position_id": "PAPER_1765155527019_BTC_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T01:58:51.817555_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T01:58:51.817555",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3064.3,
+    "stop_loss": 3047.9218651053643,
+    "take_profit": 3127.538268884909,
+    "status": "pending",
+    "position_id": "PAPER_1765155531817_ETH_USDT",
+    "metadata": {
+      "confidence": 51,
+      "weighted_confidence": 41.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:09:10.260075_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T02:09:10.260075",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 90593.24,
+    "stop_loss": 90126.82573618603,
+    "take_profit": 91830.13000497039,
+    "status": "pending",
+    "position_id": "PAPER_1765156150259_BTC_USDT",
+    "metadata": {
+      "confidence": 56,
+      "weighted_confidence": 61.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:09:15.387847_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T02:09:15.387847",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3071.59,
+    "stop_loss": 3052.273130735345,
+    "take_profit": 3132.6148211074155,
+    "status": "pending",
+    "position_id": "PAPER_1765156155387_ETH_USDT",
+    "metadata": {
+      "confidence": 41,
+      "weighted_confidence": 41.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:09:20.520103_MINA/USDT_SHORT",
+    "timestamp": "2025-12-08T02:09:20.520103",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0934,
+    "stop_loss": 0.09370397088296942,
+    "take_profit": 0.09144685690117822,
+    "status": "pending",
+    "position_id": "PAPER_1765156160520_MINA_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:19:34.001676_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T02:19:34.001676",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 90750.16,
+    "stop_loss": 90357.23788256744,
+    "take_profit": 91973.68679032965,
+    "status": "pending",
+    "position_id": "PAPER_1765156774001_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:19:39.180077_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T02:19:39.180077",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3080.0,
+    "stop_loss": 3060.964717661811,
+    "take_profit": 3140.279221640559,
+    "status": "pending",
+    "position_id": "PAPER_1765156779179_ETH_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:29:59.278069_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T02:29:59.278069",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91142.57,
+    "stop_loss": 90553.85248256744,
+    "take_profit": 92466.41036175822,
+    "status": "pending",
+    "position_id": "PAPER_1765157399277_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 65.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:30:05.853752_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T02:30:05.853752",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3108.05,
+    "stop_loss": 3089.63668589563,
+    "take_profit": 3171.0916241764376,
+    "status": "pending",
+    "position_id": "PAPER_1765157405853_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:30:11.114975_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T02:30:11.114975",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0944,
+    "stop_loss": 0.09394082358479477,
+    "take_profit": 0.09636287775940687,
+    "status": "pending",
+    "position_id": "PAPER_1765157411114_MINA_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:40:23.765420_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T02:40:23.765420",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91562.29,
+    "stop_loss": 91050.7591343107,
+    "take_profit": 92911.01747877548,
+    "status": "pending",
+    "position_id": "PAPER_1765158023765_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:40:29.102311_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T02:40:29.102311",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3130.25,
+    "stop_loss": 3100.83808589563,
+    "take_profit": 3199.0066241764375,
+    "status": "pending",
+    "position_id": "PAPER_1765158029102_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:40:34.495525_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T02:40:34.495525",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0951,
+    "stop_loss": 0.09423482358479476,
+    "take_profit": 0.09721287775940687,
+    "status": "pending",
+    "position_id": "PAPER_1765158034495_MINA_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:50:48.329854_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T02:50:48.329854",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91095.03,
+    "stop_loss": 91050.7591343107,
+    "take_profit": 92403.33765886295,
+    "status": "pending",
+    "position_id": "PAPER_1765158648329_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:50:53.293417_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T02:50:53.293417",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3112.37,
+    "stop_loss": 3100.83808589563,
+    "take_profit": 3179.3504367352634,
+    "status": "pending",
+    "position_id": "PAPER_1765158653293_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T02:50:58.289985_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T02:50:58.289985",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0946,
+    "stop_loss": 0.09423482358479476,
+    "take_profit": 0.09662624363373495,
+    "status": "pending",
+    "position_id": "PAPER_1765158658289_MINA_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:01:11.568239_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T03:01:11.568239",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 90848.62,
+    "stop_loss": 90524.83215879166,
+    "take_profit": 92124.74338731151,
+    "status": "pending",
+    "position_id": "PAPER_1765159271568_BTC_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:01:16.648490_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T03:01:16.648490",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3097.49,
+    "stop_loss": 3078.16395957546,
+    "take_profit": 3163.0660177847853,
+    "status": "pending",
+    "position_id": "PAPER_1765159276648_ETH_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:01:21.489738_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T03:01:21.489738",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.094,
+    "stop_loss": 0.09351860710368376,
+    "take_profit": 0.09602385888438654,
+    "status": "pending",
+    "position_id": "PAPER_1765159281489_MINA_USDT",
+    "metadata": {
+      "confidence": 50,
+      "weighted_confidence": 38.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:11:34.112278_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T03:11:34.112278",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91031.83,
+    "stop_loss": 90571.32615879166,
+    "take_profit": 92331.67481588294,
+    "status": "pending",
+    "position_id": "PAPER_1765159894112_BTC_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:11:38.886062_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T03:11:38.886062",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3108.51,
+    "stop_loss": 3082.48575957546,
+    "take_profit": 3176.2910177847857,
+    "status": "pending",
+    "position_id": "PAPER_1765159898885_ETH_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:11:44.082919_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T03:11:44.082919",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0942,
+    "stop_loss": 0.09356860710368374,
+    "take_profit": 0.09622385888438659,
+    "status": "pending",
+    "position_id": "PAPER_1765159904082_MINA_USDT",
+    "metadata": {
+      "confidence": 50,
+      "weighted_confidence": 38.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:21:56.726911_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T03:21:56.726911",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91014.58,
+    "stop_loss": 90678.7011429125,
+    "take_profit": 92262.73875760559,
+    "status": "pending",
+    "position_id": "PAPER_1765160516726_BTC_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:22:01.486603_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T03:22:01.486603",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3099.85,
+    "stop_loss": 3084.7399836179143,
+    "take_profit": 3164.608802228729,
+    "status": "pending",
+    "position_id": "PAPER_1765160521486_ETH_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:22:06.226106_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T03:22:06.226106",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0943,
+    "stop_loss": 0.09384774639331535,
+    "take_profit": 0.09624358324978759,
+    "status": "pending",
+    "position_id": "PAPER_1765160526225_MINA_USDT",
+    "metadata": {
+      "confidence": 50,
+      "weighted_confidence": 38.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:32:18.793496_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T03:32:18.793496",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91100.44,
+    "stop_loss": 90764.22882862124,
+    "take_profit": 92301.07813206234,
+    "status": "pending",
+    "position_id": "PAPER_1765161138793_BTC_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:32:23.868547_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T03:32:23.868547",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3099.04,
+    "stop_loss": 3084.7399836179143,
+    "take_profit": 3161.0803163552487,
+    "status": "pending",
+    "position_id": "PAPER_1765161143868_ETH_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:42:42.258774_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T03:42:42.258774",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91144.92,
+    "stop_loss": 90784.61302862123,
+    "take_profit": 92359.91741777661,
+    "status": "pending",
+    "position_id": "PAPER_1765161762258_BTC_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:42:47.031006_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T03:42:47.031006",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3095.3,
+    "stop_loss": 3084.7399836179143,
+    "take_profit": 3157.998173498106,
+    "status": "pending",
+    "position_id": "PAPER_1765161767030_ETH_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:53:05.287719_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T03:53:05.287719",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91282.79,
+    "stop_loss": 90881.59272575911,
+    "take_profit": 92455.24117364972,
+    "status": "pending",
+    "position_id": "PAPER_1765162385287_BTC_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T03:53:11.201839_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T03:53:11.201839",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3102.66,
+    "stop_loss": 3085.7979967305105,
+    "take_profit": 3162.114018248241,
+    "status": "pending",
+    "position_id": "PAPER_1765162391201_ETH_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:03:29.722509_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T04:03:29.722509",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91229.98,
+    "stop_loss": 91016.55687318322,
+    "take_profit": 92392.65272247065,
+    "status": "pending",
+    "position_id": "PAPER_1765163009722_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:03:34.494899_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T04:03:34.494899",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3104.46,
+    "stop_loss": 3093.8800770574594,
+    "take_profit": 3163.8686802101015,
+    "status": "pending",
+    "position_id": "PAPER_1765163014494_ETH_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:03:39.261530_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T04:03:39.261530",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0943,
+    "stop_loss": 0.09397681712072684,
+    "take_profit": 0.09601412259467336,
+    "status": "pending",
+    "position_id": "PAPER_1765163019261_MINA_USDT",
+    "metadata": {
+      "confidence": 40,
+      "weighted_confidence": 38.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:13:52.683233_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T04:13:52.683233",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91136.16,
+    "stop_loss": 90958.41187318321,
+    "take_profit": 92320.3148653278,
+    "status": "pending",
+    "position_id": "PAPER_1765163632683_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:13:57.446965_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T04:13:57.446965",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3102.96,
+    "stop_loss": 3092.1922770574597,
+    "take_profit": 3162.9922516386728,
+    "status": "pending",
+    "position_id": "PAPER_1765163637446_ETH_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:14:02.276509_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T04:14:02.276509",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0943,
+    "stop_loss": 0.09397681712072684,
+    "take_profit": 0.09601412259467336,
+    "status": "pending",
+    "position_id": "PAPER_1765163642276_MINA_USDT",
+    "metadata": {
+      "confidence": 40,
+      "weighted_confidence": 38.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:24:16.022582_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T04:24:16.022582",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91318.39,
+    "stop_loss": 90958.41187318321,
+    "take_profit": 92464.52237494725,
+    "status": "pending",
+    "position_id": "PAPER_1765164256022_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:24:20.825561_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T04:24:20.825561",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3114.59,
+    "stop_loss": 3094.9996493517133,
+    "take_profit": 3173.651376521625,
+    "status": "pending",
+    "position_id": "PAPER_1765164260825_ETH_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:24:25.611417_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T04:24:25.611417",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0945,
+    "stop_loss": 0.09402193540865415,
+    "take_profit": 0.09621872608280899,
+    "status": "pending",
+    "position_id": "PAPER_1765164265611_MINA_USDT",
+    "metadata": {
+      "confidence": 40,
+      "weighted_confidence": 38.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:34:40.321853_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T04:34:40.321853",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0947,
+    "stop_loss": 0.09425674186778872,
+    "take_profit": 0.09631738850546553,
+    "status": "pending",
+    "position_id": "PAPER_1765164880321_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:44:54.387364_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T04:44:54.387364",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91003.45,
+    "stop_loss": 90961.89268586489,
+    "take_profit": 92137.79271551223,
+    "status": "pending",
+    "position_id": "PAPER_1765165494387_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:44:59.222836_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T04:44:59.222836",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3104.94,
+    "stop_loss": 3097.250764416542,
+    "take_profit": 3163.6897475864066,
+    "status": "pending",
+    "position_id": "PAPER_1765165499222_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:45:04.107426_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T04:45:04.107426",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0943,
+    "stop_loss": 0.0941247418677887,
+    "take_profit": 0.09588145259180987,
+    "status": "pending",
+    "position_id": "PAPER_1765165504107_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:55:17.604816_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T04:55:17.604816",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91020.0,
+    "stop_loss": 90961.89268586489,
+    "take_profit": 92097.1232358328,
+    "status": "pending",
+    "position_id": "PAPER_1765166117604_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:55:22.371051_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T04:55:22.371051",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3109.25,
+    "stop_loss": 3097.250764416542,
+    "take_profit": 3165.6461941873777,
+    "status": "pending",
+    "position_id": "PAPER_1765166122370_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T04:55:27.170355_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T04:55:27.170355",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0944,
+    "stop_loss": 0.0941247418677887,
+    "take_profit": 0.09600288116323845,
+    "status": "pending",
+    "position_id": "PAPER_1765166127170_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:05:39.791835_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T05:05:39.791835",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91064.2,
+    "stop_loss": 90961.89268586489,
+    "take_profit": 92101.32473939576,
+    "status": "pending",
+    "position_id": "PAPER_1765166739791_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:05:44.862273_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T05:05:44.862273",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3112.49,
+    "stop_loss": 3099.433119177399,
+    "take_profit": 3167.145547663789,
+    "status": "pending",
+    "position_id": "PAPER_1765166744862_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:05:49.662851_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T05:05:49.662851",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0945,
+    "stop_loss": 0.09422514091290882,
+    "take_profit": 0.09605114475361942,
+    "status": "pending",
+    "position_id": "PAPER_1765166749662_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:16:02.681804_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T05:16:02.681804",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91124.16,
+    "stop_loss": 90961.89268586489,
+    "take_profit": 92092.49986005116,
+    "status": "pending",
+    "position_id": "PAPER_1765167362681_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:16:08.261034_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T05:16:08.261034",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3111.36,
+    "stop_loss": 3099.564907259659,
+    "take_profit": 3162.3858656878047,
+    "status": "pending",
+    "position_id": "PAPER_1765167368260_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:16:14.720567_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T05:16:14.720567",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0944,
+    "stop_loss": 0.09416714091290881,
+    "take_profit": 0.09586024665897319,
+    "status": "pending",
+    "position_id": "PAPER_1765167374720_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:26:29.373568_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T05:26:29.373568",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91328.0,
+    "stop_loss": 90961.89268586489,
+    "take_profit": 92346.82771719401,
+    "status": "pending",
+    "position_id": "PAPER_1765167989373_BTC_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:26:34.878496_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T05:26:34.878496",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3122.86,
+    "stop_loss": 3103.276507259659,
+    "take_profit": 3176.3458656878047,
+    "status": "pending",
+    "position_id": "PAPER_1765167994878_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:26:40.603453_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T05:26:40.603453",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.095,
+    "stop_loss": 0.09435742682161793,
+    "take_profit": 0.09658881808754458,
+    "status": "pending",
+    "position_id": "PAPER_1765168000603_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:36:54.727215_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T05:36:54.727215",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91286.46,
+    "stop_loss": 91108.47978197635,
+    "take_profit": 92286.07900270057,
+    "status": "pending",
+    "position_id": "PAPER_1765168614727_BTC_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:36:59.771271_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T05:36:59.771271",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3126.87,
+    "stop_loss": 3114.8700565336935,
+    "take_profit": 3180.662589567247,
+    "status": "pending",
+    "position_id": "PAPER_1765168619771_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:37:05.015354_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T05:37:05.015354",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.095,
+    "stop_loss": 0.09464068413945612,
+    "take_profit": 0.09662533108129144,
+    "status": "pending",
+    "position_id": "PAPER_1765168625015_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:47:17.995516_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T05:47:17.995516",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91250.86,
+    "stop_loss": 91062.74098197636,
+    "take_profit": 92206.57417597706,
+    "status": "pending",
+    "position_id": "PAPER_1765169237995_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:47:23.373515_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T05:47:23.373515",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3123.26,
+    "stop_loss": 3114.8700565336935,
+    "take_profit": 3174.125261741015,
+    "status": "pending",
+    "position_id": "PAPER_1765169243373_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:47:28.616936_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T05:47:28.616936",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0949,
+    "stop_loss": 0.09464068413945612,
+    "take_profit": 0.09640923600405638,
+    "status": "pending",
+    "position_id": "PAPER_1765169248616_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:57:41.460421_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T05:57:41.460421",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91293.12,
+    "stop_loss": 91062.74098197636,
+    "take_profit": 92267.15989026277,
+    "status": "pending",
+    "position_id": "PAPER_1765169861460_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:57:46.411055_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T05:57:46.411055",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3130.79,
+    "stop_loss": 3114.8700565336935,
+    "take_profit": 3183.075976026729,
+    "status": "pending",
+    "position_id": "PAPER_1765169866410_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T05:57:51.214863_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T05:57:51.214863",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.095,
+    "stop_loss": 0.09464068413945612,
+    "take_profit": 0.09655209314691353,
+    "status": "pending",
+    "position_id": "PAPER_1765169871214_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:08:03.809904_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T06:08:03.809904",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91127.58,
+    "stop_loss": 91062.74098197636,
+    "take_profit": 92084.9333164685,
+    "status": "pending",
+    "position_id": "PAPER_1765170483809_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:08:08.873167_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T06:08:08.873167",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3125.77,
+    "stop_loss": 3114.8700565336935,
+    "take_profit": 3175.5834063105344,
+    "status": "pending",
+    "position_id": "PAPER_1765170488873_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:08:13.719597_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T06:08:13.719597",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0949,
+    "stop_loss": 0.09464068413945612,
+    "take_profit": 0.09640398445274623,
+    "status": "pending",
+    "position_id": "PAPER_1765170493719_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:18:26.135414_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T06:18:26.135414",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91118.27,
+    "stop_loss": 91062.74098197636,
+    "take_profit": 92024.35119182279,
+    "status": "pending",
+    "position_id": "PAPER_1765171106135_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:18:31.067594_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T06:18:31.067594",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3124.85,
+    "stop_loss": 3114.8700565336935,
+    "take_profit": 3172.301938512843,
+    "status": "pending",
+    "position_id": "PAPER_1765171111067_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:18:36.187588_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T06:18:36.187588",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0947,
+    "stop_loss": 0.09464068413945612,
+    "take_profit": 0.09615931209387665,
+    "status": "pending",
+    "position_id": "PAPER_1765171116187_MINA_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:28:48.912674_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T06:28:48.912674",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91306.1,
+    "stop_loss": 91062.74098197636,
+    "take_profit": 92265.06904896566,
+    "status": "pending",
+    "position_id": "PAPER_1765171728912_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:28:53.857127_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T06:28:53.857127",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3132.56,
+    "stop_loss": 3117.6025712130627,
+    "take_profit": 3182.2747956557,
+    "status": "pending",
+    "position_id": "PAPER_1765171733857_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:28:59.240073_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T06:28:59.240073",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0952,
+    "stop_loss": 0.09464068413945612,
+    "take_profit": 0.09674502637959094,
+    "status": "pending",
+    "position_id": "PAPER_1765171739239_MINA_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:39:12.448423_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T06:39:12.448423",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91344.83,
+    "stop_loss": 91137.96375067468,
+    "take_profit": 92269.28697403953,
+    "status": "pending",
+    "position_id": "PAPER_1765172352448_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:39:17.229788_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T06:39:17.229788",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3134.17,
+    "stop_loss": 3123.870114091756,
+    "take_profit": 3182.38873882315,
+    "status": "pending",
+    "position_id": "PAPER_1765172357229_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:39:22.104340_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T06:39:22.104340",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0955,
+    "stop_loss": 0.09501931186389713,
+    "take_profit": 0.09702038163819163,
+    "status": "pending",
+    "position_id": "PAPER_1765172362104_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:49:34.610125_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T06:49:34.610125",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91371.57,
+    "stop_loss": 91137.96375067468,
+    "take_profit": 92244.55933303671,
+    "status": "pending",
+    "position_id": "PAPER_1765172974610_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:49:40.217965_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T06:49:40.217965",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3137.02,
+    "stop_loss": 3123.870114091756,
+    "take_profit": 3183.1638289072107,
+    "status": "pending",
+    "position_id": "PAPER_1765172980217_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:49:45.011988_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T06:49:45.011988",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0957,
+    "stop_loss": 0.09529218067750739,
+    "take_profit": 0.09715310948036165,
+    "status": "pending",
+    "position_id": "PAPER_1765172985011_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T06:59:58.884386_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T06:59:58.884386",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91334.03,
+    "stop_loss": 91150.23697560723,
+    "take_profit": 92216.53576160813,
+    "status": "pending",
+    "position_id": "PAPER_1765173598884_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:00:04.121311_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T07:00:04.121311",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3130.64,
+    "stop_loss": 3123.870114091756,
+    "take_profit": 3174.057075822002,
+    "status": "pending",
+    "position_id": "PAPER_1765173604121_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:00:09.447409_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T07:00:09.447409",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0958,
+    "stop_loss": 0.09546356260975662,
+    "take_profit": 0.0971891118644175,
+    "status": "pending",
+    "position_id": "PAPER_1765173609447_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:10:22.332990_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T07:10:22.332990",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91430.0,
+    "stop_loss": 91150.23697560723,
+    "take_profit": 92291.86177863613,
+    "status": "pending",
+    "position_id": "PAPER_1765174222332_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:10:27.120909_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T07:10:27.120909",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3129.43,
+    "stop_loss": 3123.870114091756,
+    "take_profit": 3175.4056472505736,
+    "status": "pending",
+    "position_id": "PAPER_1765174227120_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:10:33.793004_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T07:10:33.793004",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0958,
+    "stop_loss": 0.09548956260975662,
+    "take_profit": 0.09725339757870322,
+    "status": "pending",
+    "position_id": "PAPER_1765174233792_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:20:46.937221_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T07:20:46.937221",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91363.14,
+    "stop_loss": 91197.66309024184,
+    "take_profit": 92185.5523658764,
+    "status": "pending",
+    "position_id": "PAPER_1765174846937_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:20:51.920109_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T07:20:51.920109",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3127.21,
+    "stop_loss": 3123.870114091756,
+    "take_profit": 3170.638815304104,
+    "status": "pending",
+    "position_id": "PAPER_1765174851920_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:20:56.675715_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T07:20:56.675715",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0961,
+    "stop_loss": 0.09565960634878096,
+    "take_profit": 0.0974924406087959,
+    "status": "pending",
+    "position_id": "PAPER_1765174856675_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:31:09.547958_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T07:31:09.547958",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91487.8,
+    "stop_loss": 91287.42776121767,
+    "take_profit": 92267.9269928036,
+    "status": "pending",
+    "position_id": "PAPER_1765175469547_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:31:14.513366_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T07:31:14.513366",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3125.75,
+    "stop_loss": 3123.870114091756,
+    "take_profit": 3167.4971652313616,
+    "status": "pending",
+    "position_id": "PAPER_1765175474513_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:31:19.779509_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T07:31:19.779509",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0961,
+    "stop_loss": 0.09582844571390284,
+    "take_profit": 0.09743430709592277,
+    "status": "pending",
+    "position_id": "PAPER_1765175479779_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:41:32.229900_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T07:41:32.229900",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91566.5,
+    "stop_loss": 91329.65036121766,
+    "take_profit": 92368.16913566073,
+    "status": "pending",
+    "position_id": "PAPER_1765176092229_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:41:36.975348_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T07:41:36.975348",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3135.06,
+    "stop_loss": 3123.870114091756,
+    "take_profit": 3179.0421652313617,
+    "status": "pending",
+    "position_id": "PAPER_1765176096975_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:41:41.773648_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T07:41:41.773648",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0965,
+    "stop_loss": 0.09595444571390284,
+    "take_profit": 0.09789859281020849,
+    "status": "pending",
+    "position_id": "PAPER_1765176101773_MINA_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:51:54.656037_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T07:51:54.656037",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91590.03,
+    "stop_loss": 91420.02862509589,
+    "take_profit": 92359.08113617476,
+    "status": "pending",
+    "position_id": "PAPER_1765176714655_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:51:59.734450_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T07:51:59.734450",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3135.54,
+    "stop_loss": 3127.1368331000413,
+    "take_profit": 3177.65558200055,
+    "status": "pending",
+    "position_id": "PAPER_1765176719734_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T07:52:05.127244_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T07:52:05.127244",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0969,
+    "stop_loss": 0.09649340114251252,
+    "take_profit": 0.0983226729156018,
+    "status": "pending",
+    "position_id": "PAPER_1765176725127_MINA_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:02:18.656903_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T08:02:18.656903",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91450.84,
+    "stop_loss": 91336.5086250959,
+    "take_profit": 92208.97411624392,
+    "status": "pending",
+    "position_id": "PAPER_1765177338656_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:02:23.509368_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T08:02:23.509368",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3128.26,
+    "stop_loss": 3123.894633100041,
+    "take_profit": 3169.1439077760215,
+    "status": "pending",
+    "position_id": "PAPER_1765177343509_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:12:49.874256_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T08:12:49.874256",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91396.23,
+    "stop_loss": 91336.5086250959,
+    "take_profit": 92176.87268767248,
+    "status": "pending",
+    "position_id": "PAPER_1765177969874_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:12:54.918689_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T08:12:54.918689",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3126.68,
+    "stop_loss": 3123.894633100041,
+    "take_profit": 3168.8153363474494,
+    "status": "pending",
+    "position_id": "PAPER_1765177974918_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:12:59.739748_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T08:12:59.739748",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0965,
+    "stop_loss": 0.09643540114251253,
+    "take_profit": 0.09792666566652826,
+    "status": "pending",
+    "position_id": "PAPER_1765177979739_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:23:12.252111_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T08:23:12.252111",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91575.99,
+    "stop_loss": 91336.5086250959,
+    "take_profit": 92337.57596508364,
+    "status": "pending",
+    "position_id": "PAPER_1765178592252_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:23:17.079266_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T08:23:17.079266",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3129.81,
+    "stop_loss": 3123.894633100041,
+    "take_profit": 3170.611077628754,
+    "status": "pending",
+    "position_id": "PAPER_1765178597079_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:33:35.243882_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T08:33:35.243882",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91694.0,
+    "stop_loss": 91492.0792846949,
+    "take_profit": 92452.61921247562,
+    "status": "pending",
+    "position_id": "PAPER_1765179215243_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:33:40.067289_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T08:33:40.067289",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3132.66,
+    "stop_loss": 3123.894633100041,
+    "take_profit": 3172.6185516756796,
+    "status": "pending",
+    "position_id": "PAPER_1765179220067_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:33:44.883847_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T08:33:44.883847",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0967,
+    "stop_loss": 0.09612588743289159,
+    "take_profit": 0.09815513519205761,
+    "status": "pending",
+    "position_id": "PAPER_1765179224883_MINA_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:43:57.659302_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T08:43:57.659302",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91716.14,
+    "stop_loss": 91554.5584846949,
+    "take_profit": 92506.63635533277,
+    "status": "pending",
+    "position_id": "PAPER_1765179837659_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:44:02.448582_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T08:44:02.448582",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3133.73,
+    "stop_loss": 3124.1595815299297,
+    "take_profit": 3174.5928373899656,
+    "status": "pending",
+    "position_id": "PAPER_1765179842448_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:44:07.258515_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T08:44:07.258515",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0967,
+    "stop_loss": 0.09625188743289159,
+    "take_profit": 0.09821942090634332,
+    "status": "pending",
+    "position_id": "PAPER_1765179847258_MINA_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:54:19.925925_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T08:54:19.925925",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91515.52,
+    "stop_loss": 91258.03898525416,
+    "take_profit": 92287.96304423756,
+    "status": "pending",
+    "position_id": "PAPER_1765180459925_BTC_USDT",
+    "metadata": {
+      "confidence": 56,
+      "weighted_confidence": 61.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T08:54:30.916328_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T08:54:30.916328",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0966,
+    "stop_loss": 0.09625188743289159,
+    "take_profit": 0.09809660512731885,
+    "status": "pending",
+    "position_id": "PAPER_1765180470916_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:04:43.453273_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T09:04:43.453273",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91525.86,
+    "stop_loss": 91278.9947720217,
+    "take_profit": 92266.45568393488,
+    "status": "pending",
+    "position_id": "PAPER_1765181083453_BTC_USDT",
+    "metadata": {
+      "confidence": 56,
+      "weighted_confidence": 61.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:04:48.287445_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T09:04:48.287445",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3131.25,
+    "stop_loss": 3124.1595815299297,
+    "take_profit": 3169.0680587699194,
+    "status": "pending",
+    "position_id": "PAPER_1765181088287_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:04:53.504915_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T09:04:53.504915",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0969,
+    "stop_loss": 0.09651672882064215,
+    "take_profit": 0.09837541904679613,
+    "status": "pending",
+    "position_id": "PAPER_1765181093504_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:15:06.516919_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T09:15:06.516919",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91600.75,
+    "stop_loss": 91554.5584846949,
+    "take_profit": 92292.02425753138,
+    "status": "pending",
+    "position_id": "PAPER_1765181706516_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:15:12.004863_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T09:15:12.004863",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3132.55,
+    "stop_loss": 3124.1595815299297,
+    "take_profit": 3168.18044232717,
+    "status": "pending",
+    "position_id": "PAPER_1765181712004_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:15:16.901104_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T09:15:16.901104",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0988,
+    "stop_loss": 0.09827385593857794,
+    "take_profit": 0.1005312564618209,
+    "status": "pending",
+    "position_id": "PAPER_1765181716900_MINA_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:25:31.875684_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T09:25:31.875684",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91717.87,
+    "stop_loss": 91554.5584846949,
+    "take_profit": 92435.11354324565,
+    "status": "pending",
+    "position_id": "PAPER_1765182331875_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:25:37.416903_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T09:25:37.416903",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3133.38,
+    "stop_loss": 3125.137275935319,
+    "take_profit": 3169.92544232717,
+    "status": "pending",
+    "position_id": "PAPER_1765182337416_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:25:42.920048_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T09:25:42.920048",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0977,
+    "stop_loss": 0.09702291451272635,
+    "take_profit": 0.09973125646182093,
+    "status": "pending",
+    "position_id": "PAPER_1765182342919_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:35:57.065866_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T09:35:57.065866",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91632.98,
+    "stop_loss": 91554.5584846949,
+    "take_profit": 92322.18829015667,
+    "status": "pending",
+    "position_id": "PAPER_1765182957065_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:36:02.026661_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T09:36:02.026661",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3127.68,
+    "stop_loss": 3124.3368759353193,
+    "take_profit": 3163.4217882833923,
+    "status": "pending",
+    "position_id": "PAPER_1765182962026_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:36:06.826802_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T09:36:06.826802",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0972,
+    "stop_loss": 0.09650699204753159,
+    "take_profit": 0.0992790238574052,
+    "status": "pending",
+    "position_id": "PAPER_1765182966826_MINA_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:46:20.220529_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T09:46:20.220529",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91766.63,
+    "stop_loss": 91638.25346342749,
+    "take_profit": 92445.19463677815,
+    "status": "pending",
+    "position_id": "PAPER_1765183580220_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:46:25.428772_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T09:46:25.428772",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3132.77,
+    "stop_loss": 3126.211989507608,
+    "take_profit": 3167.409211569273,
+    "status": "pending",
+    "position_id": "PAPER_1765183585428_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:56:43.427771_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T09:56:43.427771",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91830.44,
+    "stop_loss": 91654.3194634275,
+    "take_profit": 92542.39035106386,
+    "status": "pending",
+    "position_id": "PAPER_1765184203427_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T09:56:48.301569_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T09:56:48.301569",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3142.51,
+    "stop_loss": 3129.5305895076085,
+    "take_profit": 3179.8984972835588,
+    "status": "pending",
+    "position_id": "PAPER_1765184208301_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:07:06.154140_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T10:07:06.154140",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 92205.29,
+    "stop_loss": 91843.90241708474,
+    "take_profit": 92972.40889741643,
+    "status": "pending",
+    "position_id": "PAPER_1765184826154_BTC_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:07:11.031135_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T10:07:11.031135",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3174.68,
+    "stop_loss": 3149.4151305568475,
+    "take_profit": 3217.8471760490183,
+    "status": "pending",
+    "position_id": "PAPER_1765184831031_ETH_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:07:16.054006_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T10:07:16.054006",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0983,
+    "stop_loss": 0.09727836297922327,
+    "take_profit": 0.10046019331145079,
+    "status": "pending",
+    "position_id": "PAPER_1765184836053_MINA_USDT",
+    "metadata": {
+      "confidence": 56,
+      "weighted_confidence": 58.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:17:29.124354_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T10:17:29.124354",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91950.89,
+    "stop_loss": 91843.90241708474,
+    "take_profit": 92690.42254760097,
+    "status": "pending",
+    "position_id": "PAPER_1765185449124_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:17:34.131283_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T10:17:34.131283",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3160.97,
+    "stop_loss": 3151.9117175011625,
+    "take_profit": 3202.2495206169456,
+    "status": "pending",
+    "position_id": "PAPER_1765185454131_ETH_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:27:51.886991_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T10:27:51.886991",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91987.42,
+    "stop_loss": 91843.90241708474,
+    "take_profit": 92732.31183331527,
+    "status": "pending",
+    "position_id": "PAPER_1765186071886_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:27:56.767893_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T10:27:56.767893",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3158.13,
+    "stop_loss": 3149.4151305568475,
+    "take_profit": 3200.5988063312316,
+    "status": "pending",
+    "position_id": "PAPER_1765186076767_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:38:14.214660_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T10:38:14.214660",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 92030.99,
+    "stop_loss": 91843.90241708474,
+    "take_profit": 92755.25313093561,
+    "status": "pending",
+    "position_id": "PAPER_1765186694214_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:38:19.273154_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T10:38:19.273154",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3163.57,
+    "stop_loss": 3150.077745751046,
+    "take_profit": 3205.799605879001,
+    "status": "pending",
+    "position_id": "PAPER_1765186699273_ETH_USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:48:37.169673_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T10:48:37.169673",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91965.9,
+    "stop_loss": 91843.90241708474,
+    "take_profit": 92651.95790729734,
+    "status": "pending",
+    "position_id": "PAPER_1765187317169_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:48:42.517553_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T10:48:42.517553",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3157.17,
+    "stop_loss": 3150.077745751046,
+    "take_profit": 3197.525348316215,
+    "status": "pending",
+    "position_id": "PAPER_1765187322517_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:48:47.357891_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T10:48:47.357891",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0975,
+    "stop_loss": 0.09727836297922327,
+    "take_profit": 0.09942898859521056,
+    "status": "pending",
+    "position_id": "PAPER_1765187327357_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:59:00.460169_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T10:59:00.460169",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91929.88,
+    "stop_loss": 91843.90241708474,
+    "take_profit": 92621.91647872592,
+    "status": "pending",
+    "position_id": "PAPER_1765187940460_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:59:06.315275_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T10:59:06.315275",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3158.97,
+    "stop_loss": 3150.077745751046,
+    "take_profit": 3199.325348316215,
+    "status": "pending",
+    "position_id": "PAPER_1765187946315_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T10:59:11.312929_MINA/USDT_LONG",
+    "timestamp": "2025-12-08T10:59:11.312929",
+    "symbol": "MINA/USDT",
+    "direction": "LONG",
+    "entry": 0.0975,
+    "stop_loss": 0.09727836297922327,
+    "take_profit": 0.09942898859521056,
+    "status": "pending",
+    "position_id": "PAPER_1765187951312_MINA_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T11:09:24.290689_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T11:09:24.290689",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 91882.9,
+    "stop_loss": 91843.90241708474,
+    "take_profit": 92552.83958738834,
+    "status": "pending",
+    "position_id": "PAPER_1765188564290_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T11:09:29.319565_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T11:09:29.319565",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3156.14,
+    "stop_loss": 3150.077745751046,
+    "take_profit": 3195.3327724160768,
+    "status": "pending",
+    "position_id": "PAPER_1765188569319_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T11:09:34.210373_MINA/USDT_SHORT",
+    "timestamp": "2025-12-08T11:09:34.210373",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.097,
+    "stop_loss": 0.09776294404933168,
+    "take_profit": 0.09510165344730445,
+    "status": "pending",
+    "position_id": "PAPER_1765188574210_MINA_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T11:19:47.404058_BTC/USDT_LONG",
+    "timestamp": "2025-12-08T11:19:47.404058",
+    "symbol": "BTC/USDT",
+    "direction": "LONG",
+    "entry": 92063.98,
+    "stop_loss": 91855.51960357437,
+    "take_profit": 92735.32247400346,
+    "status": "pending",
+    "position_id": "PAPER_1765189187403_BTC_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T11:19:52.386184_ETH/USDT_LONG",
+    "timestamp": "2025-12-08T11:19:52.386184",
+    "symbol": "ETH/USDT",
+    "direction": "LONG",
+    "entry": 3160.18,
+    "stop_loss": 3150.077745751046,
+    "take_profit": 3198.275482549622,
+    "status": "pending",
+    "position_id": "PAPER_1765189192386_ETH_USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T11:19:57.316856_MINA/USDT_SHORT",
+    "timestamp": "2025-12-08T11:19:57.316856",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0972,
+    "stop_loss": 0.09757764964439852,
+    "take_profit": 0.09539439248678265,
+    "status": "pending",
+    "position_id": "PAPER_1765189197316_MINA_USDT",
+    "metadata": {
+      "confidence": 61,
+      "weighted_confidence": 77.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T13:41:22.740321_BTC/USDT_SHORT",
+    "timestamp": "2025-12-08T13:41:22.740321",
+    "symbol": "BTC/USDT",
+    "direction": "SHORT",
+    "entry": 91785.99,
+    "stop_loss": 91947.13525336194,
+    "take_profit": 91170.55878808004,
+    "status": "pending",
+    "position_id": "PAPER_1765197682740_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T13:41:28.754903_ETH/USDT_SHORT",
+    "timestamp": "2025-12-08T13:41:28.754903",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3132.31,
+    "stop_loss": 3144.2294785459503,
+    "take_profit": 3099.1595160056236,
+    "status": "pending",
+    "position_id": "PAPER_1765197688754_ETH_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T13:41:35.120161_MINA/USDT_SHORT",
+    "timestamp": "2025-12-08T13:41:35.120161",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.0961,
+    "stop_loss": 0.09630847467154181,
+    "take_profit": 0.09455682052988469,
+    "status": "pending",
+    "position_id": "PAPER_1765197695120_MINA_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T13:51:54.492291_BTC/USDT_SHORT",
+    "timestamp": "2025-12-08T13:51:54.492291",
+    "symbol": "BTC/USDT",
+    "direction": "SHORT",
+    "entry": 91811.13,
+    "stop_loss": 91944.53982802574,
+    "take_profit": 91216.32887464575,
+    "status": "pending",
+    "position_id": "PAPER_1765198314492_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T13:51:59.691493_ETH/USDT_SHORT",
+    "timestamp": "2025-12-08T13:51:59.691493",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3125.78,
+    "stop_loss": 3135.393790691355,
+    "take_profit": 3092.4109791480796,
+    "status": "pending",
+    "position_id": "PAPER_1765198319691_ETH_USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T13:52:05.211322_MINA/USDT_SHORT",
+    "timestamp": "2025-12-08T13:52:05.211322",
+    "symbol": "MINA/USDT",
+    "direction": "SHORT",
+    "entry": 0.096,
+    "stop_loss": 0.09630046448394891,
+    "take_profit": 0.09443847620632145,
+    "status": "pending",
+    "position_id": "PAPER_1765198325211_MINA_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T14:02:20.022133_BTC/USDT_SHORT",
+    "timestamp": "2025-12-08T14:02:20.022133",
+    "symbol": "BTC/USDT",
+    "direction": "SHORT",
+    "entry": 91798.45,
+    "stop_loss": 91914.58258522316,
+    "take_profit": 91231.33579176289,
+    "status": "pending",
+    "position_id": "PAPER_1765198940022_BTC_USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T14:02:25.925029_ETH/USDT_SHORT",
+    "timestamp": "2025-12-08T14:02:25.925029",
+    "symbol": "ETH/USDT",
+    "direction": "SHORT",
+    "entry": 3133.48,
+    "stop_loss": 3136.402990691355,
+    "take_profit": 3101.299684719135,
+    "status": "pending",
+    "position_id": "PAPER_1765198945924_ETH_USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T16:15:44.484357_CLO/USDT:USDT_SHORT",
+    "timestamp": "2025-12-08T16:15:44.484357",
+    "symbol": "CLO/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.4836,
+    "stop_loss": 0.4856125093770552,
+    "take_profit": 0.4690565969313778,
+    "status": "pending",
+    "position_id": "PAPER_1765206944484_CLO_USDT:USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T19:10:59.992647_POWER/USDT:USDT_LONG",
+    "timestamp": "2025-12-08T19:10:59.992647",
+    "symbol": "POWER/USDT:USDT",
+    "direction": "LONG",
+    "entry": 0.29661,
+    "stop_loss": 0.28934697897568756,
+    "take_profit": 0.32439225314195147,
+    "status": "pending",
+    "position_id": "PAPER_1765217459992_POWER_USDT:USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T19:46:26.606518_POWER/USDT:USDT_SHORT",
+    "timestamp": "2025-12-08T19:46:26.606518",
+    "symbol": "POWER/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.28547,
+    "stop_loss": 0.29543454037414346,
+    "take_profit": 0.25937442558463136,
+    "status": "pending",
+    "position_id": "PAPER_1765219586606_POWER_USDT:USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T20:41:49.238360_POWER/USDT:USDT_SHORT",
+    "timestamp": "2025-12-08T20:41:49.238360",
+    "symbol": "POWER/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.28863,
+    "stop_loss": 0.2954759566839552,
+    "take_profit": 0.2640899476471183,
+    "status": "pending",
+    "position_id": "PAPER_1765222909238_POWER_USDT:USDT",
+    "metadata": {
+      "confidence": 54,
+      "weighted_confidence": 53.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T23:14:11.921313_APR/USDT:USDT_LONG",
+    "timestamp": "2025-12-08T23:14:11.921313",
+    "symbol": "APR/USDT:USDT",
+    "direction": "LONG",
+    "entry": 0.13294,
+    "stop_loss": 0.1319316264278235,
+    "take_profit": 0.13473314548720167,
+    "status": "pending",
+    "position_id": "PAPER_1765232051921_APR_USDT:USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 55.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T23:14:20.375753_POWER/USDT:USDT_LONG",
+    "timestamp": "2025-12-08T23:14:20.375753",
+    "symbol": "POWER/USDT:USDT",
+    "direction": "LONG",
+    "entry": 0.29482,
+    "stop_loss": 0.2880848554227662,
+    "take_profit": 0.31502543373170155,
+    "status": "pending",
+    "position_id": "PAPER_1765232060375_POWER_USDT:USDT",
+    "metadata": {
+      "confidence": 51,
+      "weighted_confidence": 58.0
+    }
+  },
+  {
+    "signal_id": "2025-12-08T23:26:46.989167_CLO/USDT:USDT_SHORT",
+    "timestamp": "2025-12-08T23:26:46.989167",
+    "symbol": "CLO/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.3788,
+    "stop_loss": 0.3828897728422423,
+    "take_profit": 0.3623625339701329,
+    "status": "pending",
+    "position_id": "PAPER_1765232806989_CLO_USDT:USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-09T00:20:09.465188_POWER/USDT:USDT_LONG",
+    "timestamp": "2025-12-09T00:20:09.465188",
+    "symbol": "POWER/USDT:USDT",
+    "direction": "LONG",
+    "entry": 0.31391,
+    "stop_loss": 0.3101024193624663,
+    "take_profit": 0.3354593345848354,
+    "status": "pending",
+    "position_id": "PAPER_1765236009465_POWER_USDT:USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-09T23:00:11.064075_CLO/USDT:USDT_SHORT",
+    "timestamp": "2025-12-09T23:00:11.064075",
+    "symbol": "CLO/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.4222,
+    "stop_loss": 0.42440406304147565,
+    "take_profit": 0.41156492282440127,
+    "status": "pending",
+    "position_id": "PAPER_1765317611063_CLO_USDT:USDT",
+    "metadata": {
+      "confidence": 59,
+      "weighted_confidence": 71.0
+    }
+  },
+  {
+    "signal_id": "2025-12-14T06:40:51.918651_CLO/USDT:USDT_SHORT",
+    "timestamp": "2025-12-14T06:40:51.918651",
+    "symbol": "CLO/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.296,
+    "stop_loss": 0.2971710769589417,
+    "take_profit": 0.2905413893703224,
+    "status": "pending",
+    "position_id": "PAPER_1765690851918_CLO_USDT:USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-16T19:51:17.765118_PIPPIN/USDT:USDT_LONG",
+    "timestamp": "2025-12-16T19:51:17.765118",
+    "symbol": "PIPPIN/USDT:USDT",
+    "direction": "LONG",
+    "entry": 0.33165,
+    "stop_loss": 0.32610989706849725,
+    "take_profit": 0.363466139630761,
+    "status": "pending",
+    "position_id": "PAPER_1765911077765_PIPPIN_USDT:USDT",
+    "metadata": {
+      "confidence": 55,
+      "weighted_confidence": 56.0
+    }
+  },
+  {
+    "signal_id": "2025-12-17T18:09:20.795800_PIPPIN/USDT:USDT_LONG",
+    "timestamp": "2025-12-17T18:09:20.795800",
+    "symbol": "PIPPIN/USDT:USDT",
+    "direction": "LONG",
+    "entry": 0.39785,
+    "stop_loss": 0.39302144128839656,
+    "take_profit": 0.42182881496120656,
+    "status": "pending",
+    "position_id": "PAPER_1765991360795_PIPPIN_USDT:USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-17T18:09:50.262384_H/USDT:USDT_LONG",
+    "timestamp": "2025-12-17T18:09:50.262384",
+    "symbol": "H/USDT:USDT",
+    "direction": "LONG",
+    "entry": 0.0999,
+    "stop_loss": 0.09884040754881947,
+    "take_profit": 0.1092404388199312,
+    "status": "pending",
+    "position_id": "PAPER_1765991390262_H_USDT:USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-17T18:10:49.044571_PIPPIN/USDT:USDT_LONG",
+    "timestamp": "2025-12-17T18:10:49.044571",
+    "symbol": "PIPPIN/USDT:USDT",
+    "direction": "LONG",
+    "entry": 0.39774,
+    "stop_loss": 0.39302144128839656,
+    "take_profit": 0.4203467567496918,
+    "status": "pending",
+    "position_id": "PAPER_1765991449044_PIPPIN_USDT:USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-17T18:35:35.257810_H/USDT:USDT_LONG",
+    "timestamp": "2025-12-17T18:35:35.257810",
+    "symbol": "H/USDT:USDT",
+    "direction": "LONG",
+    "entry": 0.10483,
+    "stop_loss": 0.10281415843588326,
+    "take_profit": 0.11368833100206883,
+    "status": "pending",
+    "position_id": "PAPER_1765992935257_H_USDT:USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  },
+  {
+    "signal_id": "2025-12-17T18:36:10.192134_CLO/USDT:USDT_SHORT",
+    "timestamp": "2025-12-17T18:36:10.192134",
+    "symbol": "CLO/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.2162,
+    "stop_loss": 0.21751871178262175,
+    "take_profit": 0.20949546488794404,
+    "status": "pending",
+    "position_id": "PAPER_1765992970192_CLO_USDT:USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-25T01:57:52.385769_LIGHT/USDT:USDT_SHORT",
+    "timestamp": "2025-12-25T01:57:52.385769",
+    "symbol": "LIGHT/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.8514,
+    "stop_loss": 0.8536442228152876,
+    "take_profit": 0.8395195472791054,
+    "status": "pending",
+    "position_id": "PAPER_1766624272385_LIGHT_USDT:USDT",
+    "metadata": {
+      "confidence": 58,
+      "weighted_confidence": 68.0
+    }
+  },
+  {
+    "signal_id": "2025-12-25T01:58:05.409803_PIPPIN/USDT:USDT_SHORT",
+    "timestamp": "2025-12-25T01:58:05.409803",
+    "symbol": "PIPPIN/USDT:USDT",
+    "direction": "SHORT",
+    "entry": 0.46196,
+    "stop_loss": 0.4648005395984585,
+    "take_profit": 0.4435107334252104,
+    "status": "pending",
+    "position_id": "PAPER_1766624285409_PIPPIN_USDT:USDT",
+    "metadata": {
+      "confidence": 60,
+      "weighted_confidence": 73.0
+    }
+  }
+]

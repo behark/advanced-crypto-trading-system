@@ -1,0 +1,58 @@
+{
+  "tracked_signals": {
+    "2025-12-07T19:42:20.077732_LAB/USDT_LONG": {
+      "tracked_at": "2025-12-07T19:48:45.742673",
+      "outcome": "SL_HIT"
+    },
+    "2025-12-07T19:43:59.573102_LAB/USDT_LONG": {
+      "tracked_at": "2025-12-07T19:48:48.270016",
+      "outcome": "SL_HIT"
+    },
+    "2025-12-07T19:39:20.429632_LAB/USDT_LONG": {
+      "tracked_at": "2025-12-07T19:54:02.600465",
+      "outcome": "SL_HIT"
+    }
+  },
+  "completed": [
+    {
+      "signal_id": "2025-12-07T19:42:20.077732_LAB/USDT_LONG",
+      "symbol": "LAB/USDT",
+      "direction": "LONG",
+      "entry": 0.10044,
+      "exit": 0.09963,
+      "sl": 0.09988956461127087,
+      "tp": 0.10411262381971707,
+      "outcome": "SL_HIT",
+      "pnl_percent": -0.5480240827649683,
+      "timestamp": "2025-12-07T19:42:20.077732",
+      "close_time": "2025-12-07T19:48:45.742657"
+    },
+    {
+      "signal_id": "2025-12-07T19:43:59.573102_LAB/USDT_LONG",
+      "symbol": "LAB/USDT",
+      "direction": "LONG",
+      "entry": 0.10045,
+      "exit": 0.09963,
+      "sl": 0.10033130306943927,
+      "tp": 0.10109825275393404,
+      "outcome": "SL_HIT",
+      "pnl_percent": -0.11816518721824508,
+      "timestamp": "2025-12-07T19:43:59.573102",
+      "close_time": "2025-12-07T19:48:48.270003"
+    },
+    {
+      "signal_id": "2025-12-07T19:39:20.429632_LAB/USDT_LONG",
+      "symbol": "LAB/USDT",
+      "direction": "LONG",
+      "entry": 0.10011,
+      "exit": 0.09979,
+      "sl": 0.09988956461127087,
+      "tp": 0.10378262381971708,
+      "outcome": "SL_HIT",
+      "pnl_percent": -0.22019317623527832,
+      "timestamp": "2025-12-07T19:39:20.429632",
+      "close_time": "2025-12-07T19:54:02.600453"
+    }
+  ],
+  "statistics": {}
+}

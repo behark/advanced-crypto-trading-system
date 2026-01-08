@@ -41,7 +41,7 @@ class AdvancedTradingSystem:
             max_risk_per_trade=0.02,
             max_portfolio_heat=0.06,
             max_drawdown=0.20,
-            confidence_threshold=75,
+            confidence_threshold=50,
             win_rate=win_rate,
             avg_win_loss_ratio=avg_win_loss_ratio,
         )

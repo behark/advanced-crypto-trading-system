@@ -1,0 +1,3 @@
+id,timestamp,symbol,timeframe,signal,entry_price,stop_loss,tp1,tp2,base_confidence,weighted_confidence,multi_tf_confirmed,divergences,risk_reward,status,exit_price,exit_time,pnl,pnl_pct,exit_reason
+1,2025-12-04T12:50:43.949669,BTC/USDT,5m,BUY,42000,41500,42500,43000,85,78.5,True,0,2.0,OPEN,,,,,
+2,2025-12-04T12:57:44.367325,BTC/USDT,5m,BUY,42000,41500,42500,43000,85,78.5,True,0,2.0,OPEN,,,,,

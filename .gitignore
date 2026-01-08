@@ -91,3 +91,6 @@ dmypy.json
 pd
 ta
 yf
+.env
+config.py
+__pycache__/
