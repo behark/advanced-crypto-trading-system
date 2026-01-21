@@ -6,12 +6,12 @@ Lightweight tracker for bot_diy and bot_advanced_fixed
 
 import json
 import ccxt
-import requests
 import logging
 from datetime import datetime, timedelta
 from typing import Dict, List, Optional
 import time
 import os
+from notifications import NotificationManager
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -43,6 +43,12 @@ class SignalTracker:
         self.telegram_token = telegram_token
         self.telegram_chat_id = telegram_chat_id
         self.bot_name = bot_name
+        self.notifications = NotificationManager(
+            telegram_bot_token=telegram_token,
+            telegram_chat_id=telegram_chat_id,
+            discord_webhook_url=os.getenv("DISCORD_WEBHOOK_URL"),
+            slack_webhook_url=os.getenv("SLACK_WEBHOOK_URL"),
+        )
 
         # Initialize exchange
         try:
@@ -275,8 +281,8 @@ class SignalTracker:
             logger.error(f"Error checking signal: {e}")
             return None
 
-    def send_telegram_notification(self, result: Dict):
-        """Send Telegram notification for TP/SL hit"""
+    def send_notification(self, result: Dict):
+        """Send notification for TP/SL hit to all enabled channels."""
         try:
             signal_id = result.get('signal_id', 'N/A')
             symbol = result['symbol']
@@ -326,23 +332,15 @@ class SignalTracker:
             msg += f"Total P&amp;L: {stats['total_pnl_percent']:+.2f}%\n\n"
             msg += f"⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
 
-            # Send via Telegram
-            url = f"https://api.telegram.org/bot{self.telegram_token}/sendMessage"
-            data = {
-                'chat_id': self.telegram_chat_id,
-                'text': msg,
-                'parse_mode': 'HTML'
-            }
+            results = self.notifications.send(msg)
 
-            response = requests.post(url, data=data, timeout=10)
-
-            if response.ok:
-                logger.info(f"✅ Telegram notification sent for {symbol}")
+            if any(results.values()):
+                logger.info(f"✅ Notification sent for {symbol}")
             else:
-                logger.warning(f"❌ Telegram failed: {response.text}")
+                logger.warning("❌ Notification failed or no channels enabled")
 
         except Exception as e:
-            logger.error(f"Error sending Telegram: {e}")
+            logger.error(f"Error sending notification: {e}")
 
     def get_statistics(self) -> Dict:
         """Calculate performance statistics"""
@@ -411,7 +409,7 @@ class SignalTracker:
 
                     if result:
                         # Send notification
-                        self.send_telegram_notification(result)
+                        self.send_notification(result)
                         hits_count += 1
 
                         # Small delay between notifications

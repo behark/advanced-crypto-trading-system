@@ -46,6 +46,8 @@ class TradeTracker:
             'multi_tf_confirmed': signal_data.get('multi_tf_confirmed', False),
             'divergences': signal_data.get('divergences_count', 0),
             'risk_reward': signal_data.get('risk_reward', 0),
+            'channel': signal_data.get('channel', 'local'),
+            'country': signal_data.get('country', 'Global'),
             'status': 'OPEN',
             'exit_price': None,
             'exit_time': None,

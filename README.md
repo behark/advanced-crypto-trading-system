@@ -33,6 +33,8 @@ A comprehensive algorithmic trading system for cryptocurrency markets featuring 
 - Strategy comparison framework
 - Divergence detection
 - Weighted confidence scoring
+- Multi-channel alerts (Telegram, Discord, Slack)
+- Region tagging for signals (e.g., TRADING_COUNTRY=Global)
 
 ## Installation
 
