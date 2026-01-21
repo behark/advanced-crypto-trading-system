@@ -6,14 +6,18 @@ Quick Signal Scanner - Find high confidence trading signals
 from advanced_trading_system import AdvancedTradingSystem
 import warnings
 import json
-import requests
 import time
 from datetime import datetime
+import os
+from notifications import NotificationManager
 warnings.filterwarnings('ignore')
 
 # Configuration
-TELEGRAM_BOT_TOKEN = '8472366809:AAHiiXYm9Uq17vtaXCNwIxOKAkH8LsZkcsI'
-TELEGRAM_CHAT_ID = '1507876704'
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
+SLACK_WEBHOOK_URL = os.getenv("SLACK_WEBHOOK_URL")
+TRADING_COUNTRY = os.getenv("TRADING_COUNTRY", "Global")
 TIMEFRAME = '1h'  # Trading timeframe
 SCAN_INTERVAL_MINUTES = 60  # How often to scan (60 min = 1 hour)
 
@@ -44,20 +48,18 @@ PAIRS = [
     'BEST/USDT:USDT'
 ]
 
-def send_telegram_message(message):
-    """Send message to Telegram"""
-    try:
-        url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-        data = {
-            'chat_id': TELEGRAM_CHAT_ID,
-            'text': message,
-            'parse_mode': 'HTML'
-        }
-        response = requests.post(url, data=data, timeout=10)
-        return response.status_code == 200
-    except Exception as e:
-        print(f"⚠️  Telegram send failed: {e}")
-        return False
+def send_notifications(message):
+    """Send message to all enabled channels."""
+    notifier = NotificationManager(
+        telegram_bot_token=TELEGRAM_BOT_TOKEN,
+        telegram_chat_id=TELEGRAM_CHAT_ID,
+        discord_webhook_url=DISCORD_WEBHOOK_URL,
+        slack_webhook_url=SLACK_WEBHOOK_URL,
+    )
+    if not any(notifier.enabled_channels().values()):
+        print("⚠️  Notifications disabled (no channels configured).")
+        return {}
+    return notifier.send(message)
 
 def scan_for_signals(min_confidence=50, timeframe='1h', verbose=True):
     """Scan all pairs for high confidence signals"""
@@ -142,7 +144,7 @@ def scan_for_signals(min_confidence=50, timeframe='1h', verbose=True):
 
 
 def save_and_notify_signals(high_conf, min_confidence, timeframe, sent_signals):
-    """Save signals to JSON and send new ones via Telegram"""
+    """Save signals to JSON and send new ones via notifications"""
     if not high_conf:
         return sent_signals
 
@@ -160,7 +162,7 @@ def save_and_notify_signals(high_conf, min_confidence, timeframe, sent_signals):
         json.dump(scan_data, f, indent=2)
     print(f"💾 Signals saved to {filename}")
 
-    # Send Telegram notifications only for NEW signals
+    # Send notifications only for NEW signals
     for sig in high_conf:
         signal_key = f"{sig['pair']}_{sig['signal']}_{sig['confidence']:.1f}"
 
@@ -172,7 +174,8 @@ def save_and_notify_signals(high_conf, min_confidence, timeframe, sent_signals):
         msg += f"💰 <b>{sig['pair']}</b>\n"
         msg += f"📊 Signal: <b>{sig['signal']}</b>\n"
         msg += f"✅ Confidence: <b>{sig['confidence']:.1f}%</b>\n"
-        msg += f"⏱ Timeframe: <b>{timeframe}</b>\n\n"
+        msg += f"⏱ Timeframe: <b>{timeframe}</b>\n"
+        msg += f"🌍 Region: <b>{TRADING_COUNTRY}</b>\n\n"
         msg += f"📍 Entry: <code>${sig['entry']:.8f}</code>\n"
         msg += f"🛑 Stop Loss: <code>${sig['stop']:.8f}</code>\n"
         msg += f"🎯 TP1: <code>${sig['tp1']:.8f}</code>\n"
@@ -180,11 +183,12 @@ def save_and_notify_signals(high_conf, min_confidence, timeframe, sent_signals):
         msg += f"📈 R:R Ratio: <b>{sig['rr']:.2f}</b>\n\n"
         msg += f"⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
 
-        if send_telegram_message(msg):
-            print(f"📱 Telegram alert sent for {sig['pair']}")
+        results = send_notifications(msg)
+        if any(results.values()):
+            print(f"📱 Alert sent for {sig['pair']}")
             sent_signals.add(signal_key)
         else:
-            print(f"❌ Failed to send Telegram alert for {sig['pair']}")
+            print(f"❌ Failed to send alert for {sig['pair']}")
 
     return sent_signals
 

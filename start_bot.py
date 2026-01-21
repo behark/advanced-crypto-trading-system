@@ -60,6 +60,9 @@ bot = TradingBot(
     ],
     telegram_bot_token=TELEGRAM_BOT_TOKEN,
     telegram_chat_id=TELEGRAM_CHAT_ID,
+    discord_webhook_url=os.getenv("DISCORD_WEBHOOK_URL"),
+    slack_webhook_url=os.getenv("SLACK_WEBHOOK_URL"),
+    country=os.getenv("TRADING_COUNTRY", "Global"),
 )
 
 # Print status

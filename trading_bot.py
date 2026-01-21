@@ -7,13 +7,13 @@ Supports Multi-Timeframe (1h + 4h) & Multi-Exchange Pairs
 
 import ccxt
 import time
-import requests
 import os
 from datetime import datetime
 from advanced_trading_system import AdvancedTradingSystem
 from trade_tracker import TradeTracker
 from risk_management import RiskProfile, RiskManager
 from dotenv import load_dotenv
+from notifications import NotificationManager
 
 # Load environment variables if available
 load_dotenv()
@@ -22,7 +22,8 @@ class TradingBot:
     """Automated trading bot with risk management"""
 
     def __init__(self, exchange_name='binance', account_balance=10000,
-                 dry_run=True, symbols=None, telegram_bot_token=None, telegram_chat_id=None):
+                 dry_run=True, symbols=None, telegram_bot_token=None, telegram_chat_id=None,
+                 discord_webhook_url=None, slack_webhook_url=None, country=None):
         """
         Initialize trading bot
         """
@@ -60,10 +61,14 @@ class TradingBot:
             'BEST/USDT:USDT'
         ]
 
-        # Telegram setup
-        self.telegram_bot_token = telegram_bot_token
-        self.telegram_chat_id = telegram_chat_id
-        self.telegram_enabled = bool(telegram_bot_token and telegram_chat_id)
+        # Notification setup
+        self.country = country or os.getenv("TRADING_COUNTRY", "Global")
+        self.notifications = NotificationManager(
+            telegram_bot_token=telegram_bot_token,
+            telegram_chat_id=telegram_chat_id,
+            discord_webhook_url=discord_webhook_url,
+            slack_webhook_url=slack_webhook_url,
+        )
 
         # Initialize systems
         self.trading_system = AdvancedTradingSystem(account_balance=account_balance)
@@ -89,11 +94,16 @@ class TradingBot:
         self.mode = "PAPER" if dry_run else "LIVE"
         print(f"🤖 Trading Bot initialized in {self.mode} mode")
 
-        if self.telegram_enabled:
-            print(f"📱 Telegram notifications enabled")
-            self.send_telegram(f"🤖 Trading Bot started in {self.mode} mode\n📊 Monitoring: {len(self.symbols)} pairs\n⏰ Timeframes: {self.timeframes}")
+        channels = [name for name, enabled in self.notifications.enabled_channels().items() if enabled]
+        if channels:
+            print(f"📱 Notifications enabled: {', '.join(channels)}")
+            self.notifications.send(
+                "🤖 Trading Bot started in "
+                f"{self.mode} mode\n📊 Monitoring: {len(self.symbols)} pairs\n"
+                f"⏰ Timeframes: {self.timeframes}\n🌍 Region: {self.country}"
+            )
         else:
-            print(f"📱 Telegram notifications disabled")
+            print("📱 Notifications disabled")
 
     def check_signal(self, symbol, timeframe, verbose=False):
         """Check signal for a symbol on a specific timeframe"""
@@ -120,9 +130,9 @@ class TradingBot:
             if not analysis:
                 return None
 
-            # Get signal for the specific timeframe
-            # Adjust key based on your system's output (e.g., 'signal' or 'signal_1h')
-            signal = analysis.get('signal', analysis.get(f'signal_{timeframe}'))
+            # AdvancedTradingSystem returns a single signal key named signal_5m
+            # regardless of the base timeframe passed in.
+            signal = analysis.get('signal_5m')
 
             if not signal:
                 return None
@@ -152,24 +162,6 @@ class TradingBot:
 
         return None
 
-    def send_telegram(self, message):
-        """Send message to Telegram"""
-        if not self.telegram_enabled:
-            return False
-
-        try:
-            url = f"https://api.telegram.org/bot{self.telegram_bot_token}/sendMessage"
-            data = {
-                'chat_id': self.telegram_chat_id,
-                'text': message,
-                'parse_mode': 'HTML'
-            }
-            response = requests.post(url, data=data, timeout=10)
-            return response.status_code == 200
-        except Exception as e:
-            print(f"❌ Telegram error: {e}")
-            return False
-
     def execute_trade(self, trade_signal):
         """Execute a trade (paper or live)"""
         if not trade_signal:
@@ -189,7 +181,7 @@ class TradingBot:
 
         # Validate trade with risk manager
         trade_info = self.trading_system.validate_and_size_trade(
-            trade_signal['full_analysis'].get('signal', trade_signal['full_analysis'].get(f'signal_{tf}')),
+            trade_signal['full_analysis'].get('signal_5m'),
             entry,
             stop_loss,
             symbol
@@ -215,6 +207,8 @@ class TradingBot:
             'take_profit_1': tp1,
             'confidence': trade_signal['confidence'],
             'risk_reward': trade_signal['risk_reward'],
+            'channel': ','.join([c for c, enabled in self.notifications.enabled_channels().items() if enabled]) or 'local',
+            'country': self.country,
         }
 
         trade_id = self.tracker.log_signal(log_data)
@@ -229,6 +223,7 @@ class TradingBot:
         telegram_msg += f"📊 <b>{symbol}</b> ({tf})\n"
         telegram_msg += f"Action: <b>{side.upper()}</b>\n"
         telegram_msg += f"💪 Confidence: <b>{trade_signal['confidence']:.1f}%</b>\n\n"
+        telegram_msg += f"🌍 Region: <b>{self.country}</b>\n"
         telegram_msg += f"📈 Entry: <b>${entry:.6f}</b>\n"
         telegram_msg += f"🛑 Stop: <b>${stop_loss:.6f}</b>\n"
         telegram_msg += f"🎯 TP1: <b>${tp1:.6f}</b>\n"
@@ -242,7 +237,7 @@ class TradingBot:
             telegram_msg += f"🚀 <b>LIVE TRADE EXECUTED</b>"
             print(f"\n🚀 EXECUTING LIVE TRADE")
 
-        self.send_telegram(telegram_msg)
+        self.notifications.send(telegram_msg)
         return trade_id
 
     def monitor_trades(self):
@@ -310,9 +305,13 @@ def main():
         dry_run=True,
 
         # TELEGRAM CONFIGURATION
-        # Replace with your actual token and chat ID or use env vars
-        telegram_bot_token=os.getenv("TELEGRAM_BOT_TOKEN", "7531522036:AAEktCl_WBGMt5rFJd8wP3LOK8zraGYDEL0"),
-        telegram_chat_id=os.getenv("TELEGRAM_CHAT_ID", "1507876704")
+        telegram_bot_token=os.getenv("TELEGRAM_BOT_TOKEN"),
+        telegram_chat_id=os.getenv("TELEGRAM_CHAT_ID"),
+
+        # OPTIONAL MULTI-CHANNEL CONFIGURATION
+        discord_webhook_url=os.getenv("DISCORD_WEBHOOK_URL"),
+        slack_webhook_url=os.getenv("SLACK_WEBHOOK_URL"),
+        country=os.getenv("TRADING_COUNTRY", "Global"),
     )
 
     bot.print_status()
